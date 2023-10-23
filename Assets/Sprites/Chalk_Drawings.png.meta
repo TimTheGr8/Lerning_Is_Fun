@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 1cdc1a6d14b038744a61d9f3f7afa354
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chalk_Drawings_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 869
+        width: 31
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea19b29fe2ca954b8d9e1e473ebd572
+      internalID: 376818145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 908
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad861a3541e5c154886824aba67ae878
+      internalID: -711109276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 886
+        width: 103
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa5ab2ae02509f4194176871c08f36a
+      internalID: -619286707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_5
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 876
+        width: 121
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8487dea3c1d36754b92dcacc4fe2815e
+      internalID: 1097624007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_6
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 786
+        width: 232
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb39246f2db05c45bfcb395aa2bbf84
+      internalID: -1888367393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 870
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75cd698312ee4b418872cbd0049d70b
+      internalID: -2096361028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 783
+        width: 164
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221fff42569796240940b3c1b10a1c1c
+      internalID: -1715681028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_12
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 772
+        width: 118
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1e30dc90c8f3f44980cbdf284b7b43
+      internalID: -217420515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_13
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 798
+        width: 49
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626b6bcf13b139c439cd1e79121622ba
+      internalID: -2023289247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 736
+        width: 61
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b03aaf4db829a04ca5b764ac68e50da
+      internalID: 897784813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_16
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 708
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd0319b3f43fc84d8e5db1f823a103d
+      internalID: -1898598397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_18
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 660
+        width: 123
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661032513098e2a4e86f62b997f098aa
+      internalID: 548269154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_20
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 707
+        width: 63
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a77ae85e9fa4c418f6afcfcccaa306
+      internalID: -678289422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_23
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 633
+        width: 166
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91476e7e672ad7a41bf2423f4e726fab
+      internalID: 81158922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 456
+        width: 329
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7861e56c3d04d0a4095224e70a6ce413
+      internalID: -1338094408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_32
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 622
+        width: 60
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627edda47c34f0a42aa4195f84119cac
+      internalID: -1947258621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_41
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 519
+        width: 148
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909698934dd598047ba4e4f077ea08f6
+      internalID: 2141553829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_59
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 326
+        width: 212
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8705014a7936b84da0dbbd781a843fc
+      internalID: 1262806053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_65
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 351
+        width: 289
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586edef08d8783e48afe5a15d49ba42e
+      internalID: -1211474748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_107
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 227
+        width: 341
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af52b19d80174b4bb8fc231e159426d
+      internalID: 925352379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_173
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 355
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e736923f62cecd479a57180da56d7f9
+      internalID: 105352639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 905
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1c2f257fcc7154da4f7d78819bf6e8
+      internalID: -740119521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_3
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 592
+        width: 113
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c7d8f82e4151148bc3175c4e262fcb
+      internalID: 340552838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_7
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 450
+        width: 152
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b9fbc45496acd4f88736ad9af8baeb
+      internalID: 1258795051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_8
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 251
+        width: 125
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f209f8f742bc2c64d9b25212bb2cba9d
+      internalID: -1909060619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 132
+        width: 237
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bacd2203b7c7a9469592b6d1b20842f
+      internalID: 1913308569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_15
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 225
+        width: 158
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afffb782768fd47449227d060a0e131a
+      internalID: 1896745761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chalk_Drawings_17
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 341
+        width: 129
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401000bee12c20a45966d1b21fea9602
+      internalID: -487924422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Chalk_Drawings_0: 376818145
+      Chalk_Drawings_1: -711109276
+      Chalk_Drawings_10: -2096361028
+      Chalk_Drawings_100: 1704904887
+      Chalk_Drawings_101: -769944097
+      Chalk_Drawings_102: -1351168830
+      Chalk_Drawings_103: 1594235140
+      Chalk_Drawings_104: -910466114
+      Chalk_Drawings_105: -1726919760
+      Chalk_Drawings_106: 86021220
+      Chalk_Drawings_107: 925352379
+      Chalk_Drawings_108: -1700201160
+      Chalk_Drawings_109: 1291201213
+      Chalk_Drawings_11: -1715681028
+      Chalk_Drawings_110: 386631874
+      Chalk_Drawings_111: 1549923616
+      Chalk_Drawings_112: -1545017978
+      Chalk_Drawings_113: -870194764
+      Chalk_Drawings_114: 630981454
+      Chalk_Drawings_115: 1841370633
+      Chalk_Drawings_116: 1693770836
+      Chalk_Drawings_117: -1325229069
+      Chalk_Drawings_118: -1654978931
+      Chalk_Drawings_119: 20446463
+      Chalk_Drawings_12: -217420515
+      Chalk_Drawings_120: 1941097387
+      Chalk_Drawings_121: -1104935792
+      Chalk_Drawings_122: -1933206699
+      Chalk_Drawings_123: -1038634048
+      Chalk_Drawings_124: -537009140
+      Chalk_Drawings_125: -1847383110
+      Chalk_Drawings_126: -999691247
+      Chalk_Drawings_127: -144090094
+      Chalk_Drawings_128: -385332305
+      Chalk_Drawings_129: -1305127942
+      Chalk_Drawings_13: -2023289247
+      Chalk_Drawings_130: -493030832
+      Chalk_Drawings_131: 1259670355
+      Chalk_Drawings_132: -1500779883
+      Chalk_Drawings_133: -1624534195
+      Chalk_Drawings_134: 368860932
+      Chalk_Drawings_135: -60967201
+      Chalk_Drawings_136: -1762667754
+      Chalk_Drawings_137: 1087498135
+      Chalk_Drawings_138: 1282203934
+      Chalk_Drawings_139: 610503098
+      Chalk_Drawings_14: 897784813
+      Chalk_Drawings_140: -708215194
+      Chalk_Drawings_141: 128090666
+      Chalk_Drawings_142: -681765756
+      Chalk_Drawings_143: -185898034
+      Chalk_Drawings_144: 2000347095
+      Chalk_Drawings_145: 1057291948
+      Chalk_Drawings_146: -2021606471
+      Chalk_Drawings_147: 1905313128
+      Chalk_Drawings_148: 77079223
+      Chalk_Drawings_149: 1038311544
+      Chalk_Drawings_15: 1896745761
+      Chalk_Drawings_150: -696625099
+      Chalk_Drawings_151: -650318736
+      Chalk_Drawings_152: -1901089281
+      Chalk_Drawings_153: -502128627
+      Chalk_Drawings_154: 1435747854
+      Chalk_Drawings_155: -796031719
+      Chalk_Drawings_156: 1398142471
+      Chalk_Drawings_157: -610489695
+      Chalk_Drawings_158: -1129071315
+      Chalk_Drawings_159: -1189704245
+      Chalk_Drawings_16: -1898598397
+      Chalk_Drawings_160: -382856343
+      Chalk_Drawings_161: 377439994
+      Chalk_Drawings_162: -1103742015
+      Chalk_Drawings_163: 1567568702
+      Chalk_Drawings_164: -504500744
+      Chalk_Drawings_165: -144754670
+      Chalk_Drawings_166: -1513550369
+      Chalk_Drawings_167: 2029895244
+      Chalk_Drawings_168: -6430462
+      Chalk_Drawings_169: 2058170057
+      Chalk_Drawings_17: -487924422
+      Chalk_Drawings_170: 389928816
+      Chalk_Drawings_171: 569013041
+      Chalk_Drawings_172: -969124424
+      Chalk_Drawings_173: 105352639
+      Chalk_Drawings_174: -1804060833
+      Chalk_Drawings_175: 718864799
+      Chalk_Drawings_176: -56330477
+      Chalk_Drawings_177: 2114359939
+      Chalk_Drawings_178: -1775191137
+      Chalk_Drawings_179: -1273908135
+      Chalk_Drawings_18: 548269154
+      Chalk_Drawings_180: 1030122904
+      Chalk_Drawings_181: 644287159
+      Chalk_Drawings_182: 1223976992
+      Chalk_Drawings_183: -37640979
+      Chalk_Drawings_184: 502330271
+      Chalk_Drawings_185: -1372285906
+      Chalk_Drawings_186: 108067135
+      Chalk_Drawings_187: 1873488196
+      Chalk_Drawings_188: -1428690089
+      Chalk_Drawings_189: 1151711485
+      Chalk_Drawings_19: -1704068226
+      Chalk_Drawings_190: -1929048664
+      Chalk_Drawings_191: -2085679193
+      Chalk_Drawings_192: -1735895606
+      Chalk_Drawings_193: -1201631911
+      Chalk_Drawings_194: 1525409506
+      Chalk_Drawings_2: -740119521
+      Chalk_Drawings_20: -678289422
+      Chalk_Drawings_21: 2028446196
+      Chalk_Drawings_22: -452099523
+      Chalk_Drawings_23: 81158922
+      Chalk_Drawings_24: -779947165
+      Chalk_Drawings_25: -456041614
+      Chalk_Drawings_26: -446370048
+      Chalk_Drawings_27: -469504629
+      Chalk_Drawings_28: -1338094408
+      Chalk_Drawings_29: -512516352
+      Chalk_Drawings_3: 340552838
+      Chalk_Drawings_30: 1467986506
+      Chalk_Drawings_31: 790011632
+      Chalk_Drawings_32: -1947258621
+      Chalk_Drawings_33: -372410491
+      Chalk_Drawings_34: -1190540553
+      Chalk_Drawings_35: 2113839049
+      Chalk_Drawings_36: -262551405
+      Chalk_Drawings_37: 245966088
+      Chalk_Drawings_38: 2089369393
+      Chalk_Drawings_39: -588402209
+      Chalk_Drawings_4: -619286707
+      Chalk_Drawings_40: 1685292961
+      Chalk_Drawings_41: 2141553829
+      Chalk_Drawings_42: 1933845333
+      Chalk_Drawings_43: 963260172
+      Chalk_Drawings_44: 832868891
+      Chalk_Drawings_45: 200503918
+      Chalk_Drawings_46: -1050409671
+      Chalk_Drawings_47: 1301337338
+      Chalk_Drawings_48: -1395763284
+      Chalk_Drawings_49: -724498818
+      Chalk_Drawings_5: 1097624007
+      Chalk_Drawings_50: -1343883803
+      Chalk_Drawings_51: -502455016
+      Chalk_Drawings_52: 2083055534
+      Chalk_Drawings_53: 32112467
+      Chalk_Drawings_54: 314883931
+      Chalk_Drawings_55: 1239651505
+      Chalk_Drawings_56: -131448768
+      Chalk_Drawings_57: -192182275
+      Chalk_Drawings_58: -1156678025
+      Chalk_Drawings_59: 1262806053
+      Chalk_Drawings_6: -1888367393
+      Chalk_Drawings_60: 1142426854
+      Chalk_Drawings_61: 2125574786
+      Chalk_Drawings_62: -529288359
+      Chalk_Drawings_63: 79927870
+      Chalk_Drawings_64: 667368866
+      Chalk_Drawings_65: -1211474748
+      Chalk_Drawings_66: 1835025253
+      Chalk_Drawings_67: -186443485
+      Chalk_Drawings_68: -248468503
+      Chalk_Drawings_69: 234341306
+      Chalk_Drawings_7: 1258795051
+      Chalk_Drawings_70: 391796838
+      Chalk_Drawings_71: 787414858
+      Chalk_Drawings_72: -2135205916
+      Chalk_Drawings_73: 374291901
+      Chalk_Drawings_74: 102787865
+      Chalk_Drawings_75: 304848869
+      Chalk_Drawings_76: 1803130880
+      Chalk_Drawings_77: 1627249767
+      Chalk_Drawings_78: 1227321603
+      Chalk_Drawings_79: -1808062226
+      Chalk_Drawings_8: -1909060619
+      Chalk_Drawings_80: 1919766096
+      Chalk_Drawings_81: 2050255380
+      Chalk_Drawings_82: 2026162586
+      Chalk_Drawings_83: -1206518355
+      Chalk_Drawings_84: -1806628010
+      Chalk_Drawings_85: -637121720
+      Chalk_Drawings_86: -427066529
+      Chalk_Drawings_87: 362142558
+      Chalk_Drawings_88: -931982420
+      Chalk_Drawings_89: -253575806
+      Chalk_Drawings_9: 1913308569
+      Chalk_Drawings_90: 1298439438
+      Chalk_Drawings_91: -64087999
+      Chalk_Drawings_92: -1119510582
+      Chalk_Drawings_93: 383334087
+      Chalk_Drawings_94: -1358023486
+      Chalk_Drawings_95: 458869077
+      Chalk_Drawings_96: -881294412
+      Chalk_Drawings_97: 1830107511
+      Chalk_Drawings_98: -2001768298
+      Chalk_Drawings_99: -33972415
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
