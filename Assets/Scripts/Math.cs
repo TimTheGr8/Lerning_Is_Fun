@@ -38,11 +38,12 @@ public class Math : MonoBehaviour
         Division,
         Multiplication
     }
-    private Operator _currentOperation;
+    private string _currentOperation;
 
     private void Start()
     {
-        _currentOperation = Operator.Addition;
+        //_currentOperation = Operator.Addition;
+        _currentOperation = "Addition";
         _mathGame.SetActive(false);
         _operationSelectScreen.SetActive(true);
         _feedbackText.text = "Enter your answer and press the Enter key";
@@ -108,24 +109,28 @@ public class Math : MonoBehaviour
         }
     }
 
-    public void SetOperand()
+    public void SetOperation()
     {
         switch (_operatorDropDown.options[_operatorDropDown.value].text)
         {
             case "Addition":
-                _currentOperation = Operator.Addition;
+                //_currentOperation = Operator.Addition;
+                _currentOperation = "Addition";
                 _operatorText.text = "+";
                 break;
             case "Subtraction":
-                _currentOperation = Operator.Subtraction;
+                //_currentOperation = Operator.Subtraction;
+                _currentOperation = "Subtraction";
                 _operatorText.text = "-";
                 break;
             case "Multiplication":
-                _currentOperation = Operator.Multiplication;
+                //_currentOperation = Operator.Multiplication;
+                _currentOperation = "Multiplication";
                 _operatorText.text = "x";
                 break;
             case "Division":
-                _currentOperation = Operator.Division;
+                //_currentOperation = Operator.Division;
+                _currentOperation = "Division";
                 _operatorText.text = "/";
                 break;
             default:
