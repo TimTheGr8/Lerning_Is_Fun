@@ -13,6 +13,8 @@ public class Math : MonoBehaviour
     [SerializeField]
     GameObject _mathGame;
     [SerializeField]
+    private TMP_Text _questionNumberText;
+    [SerializeField]
     private TMP_Text _number1Text;
     [SerializeField]
     private TMP_Text _number2Text;
@@ -23,6 +25,8 @@ public class Math : MonoBehaviour
     [SerializeField]
     private TMP_InputField _answerField;
     [SerializeField]
+    private GameObject _nextQuestionButton;
+    [SerializeField]
     private int _minValue = 0;
     [SerializeField]
     private int _maxValue = 50;
@@ -31,18 +35,13 @@ public class Math : MonoBehaviour
     private int _number2;
     private int _answer;
     private int _playerAnswer;
-    private enum Operator
-    {
-        Addition,
-        Subtraction,
-        Division,
-        Multiplication
-    }
+    private int _questionNumber = 0;
+    private int _correctAnswers;
     private string _currentOperation;
 
     private void Start()
     {
-        //_currentOperation = Operator.Addition;
+        _correctAnswers = 0;
         _currentOperation = "Addition";
         _mathGame.SetActive(false);
         _operationSelectScreen.SetActive(true);
@@ -56,12 +55,43 @@ public class Math : MonoBehaviour
         _number2 = Random.Range(_minValue, _maxValue + 1);
     }
 
-    private void GenerateEquation()
+    public void GenerateEquation()
     {
-        GenerateNumbers();
-        ///TODO: Check the operation and ensure the answer will be positive and division will be and int using modulo
-
-        AssignNumbers();
+        _questionNumber++;
+        if (_questionNumber > 10)
+        {
+            // Do the results stuff
+            GameManager.Instance.AdjustResults("Math", _correctAnswers);
+        }
+        else
+        {
+            _nextQuestionButton.SetActive(false);
+            _answerField.gameObject.SetActive(true);
+            _answerField.text = null;
+            _answerField.Select();
+            _feedbackText.text = "Enter your answer and press the Enter key";
+            _questionNumberText.text = $"Question {_questionNumber})";
+            GenerateNumbers();
+            switch (_currentOperation)
+            {
+                case "Addition":
+                    AdditionEquation();
+                    break;
+                case "Subtraction":
+                    SubtractionEquation();
+                    break;
+                case "Division":
+                    DivisionEquation();
+                    break;
+                case "Multiplication":
+                    MultiplicationEquation();
+                    break;
+                default:
+                    Debug.LogError("There is no operation selected.");
+                    break;
+            }
+            AssignNumbers();
+        }
     }
 
     private void AdditionEquation()
@@ -84,9 +114,18 @@ public class Math : MonoBehaviour
     {
         _answer = _number1 * _number2;
     }
+
     private void DivisionEquation()
     {
-
+        if (_number2 > 1)
+        {
+            _number1 = _number2 * Random.Range(1, 11);
+            AssignNumbers();
+        }
+        else
+        {
+            GenerateEquation();
+        }
     }
 
     private void AssignNumbers()
@@ -101,12 +140,15 @@ public class Math : MonoBehaviour
 
         if (_playerAnswer == _answer)
         {
+            _correctAnswers++;
             _feedbackText.text = "CORRECT";
         }
         else
         {
             _feedbackText.text = $"Incorrect. The correct answer is {_answer}.";
         }
+        _answerField.gameObject.SetActive(false);
+        _nextQuestionButton.SetActive(true);
     }
 
     public void SetOperation()
@@ -114,22 +156,18 @@ public class Math : MonoBehaviour
         switch (_operatorDropDown.options[_operatorDropDown.value].text)
         {
             case "Addition":
-                //_currentOperation = Operator.Addition;
                 _currentOperation = "Addition";
                 _operatorText.text = "+";
                 break;
             case "Subtraction":
-                //_currentOperation = Operator.Subtraction;
                 _currentOperation = "Subtraction";
                 _operatorText.text = "-";
                 break;
             case "Multiplication":
-                //_currentOperation = Operator.Multiplication;
                 _currentOperation = "Multiplication";
                 _operatorText.text = "x";
                 break;
             case "Division":
-                //_currentOperation = Operator.Division;
                 _currentOperation = "Division";
                 _operatorText.text = "/";
                 break;
