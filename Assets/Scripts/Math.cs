@@ -61,7 +61,7 @@ public class Math : MonoBehaviour
         if (_questionNumber > 10)
         {
             // Do the results stuff
-            GameManager.Instance.AdjustResults("Math", _correctAnswers);
+            GameManager.Instance.ShowResults();
         }
         else
         {

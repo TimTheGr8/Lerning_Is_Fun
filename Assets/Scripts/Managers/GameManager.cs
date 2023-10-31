@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
         get
         {
             if (_instance == null)
+            {
                 Debug.LogError("GameManager is NULL");
-
+            }
             return _instance;
         }
     }
@@ -29,45 +30,40 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _statesScreen;
 
-    private string _currentGame;
-    private int _totalMathQuestions;
-    private int _correctMathQuestions;
-    private int _totalSpellingQuestions;
-    private int _correctSpellingQuestions;
-    private int _totalStatesQuestions;
-    private int _correctStatesQuestions;
+    private string _currentSubject;
+    private int _correctAnswers;
+    private GameObject _currentScreen;
 
     private void OnEnable()
     {
         // Enable the title screen
+        _currentScreen = _titleScreen;
+        _currentScreen.SetActive(true);
     }
 
-    public void DisplayResults()
+    private void Awake()
     {
-
+        _instance = this;
+        _currentSubject = "Math";
     }
 
-    public void AdjustResults(string subject, int correctAnswers)
+    public void SetCurrentSubject(string subject)
     {
-        switch (subject)
-        {
-            case "Math":
-                // Do stuff here
-                _totalMathQuestions += 10;
-                _correctMathQuestions += correctAnswers;
-                break;
-            case "Spelling":
-                // More stuff here
-                _totalSpellingQuestions += 10;
-                _correctSpellingQuestions += correctAnswers;
-                break;
-            case "States":
-                _totalStatesQuestions += 10;
-                _correctStatesQuestions += correctAnswers;
-                // Last stuff 
-                break;
-            default:
-                break;
-        }
+        PlayerPrefs.SetString("Subject", subject);
+    }
+
+    public void ShowResults()
+    {
+        _currentScreen.SetActive(false);
+        _currentScreen = _resultsScreen;
+        _currentScreen.SetActive(true);
+    }
+
+    public void SwitchScreen(GameObject game)
+    {
+        var oldScreen = _currentScreen;
+        _currentScreen = game;
+        oldScreen.SetActive(false);
+        _currentScreen.SetActive(true);
     }
 }
