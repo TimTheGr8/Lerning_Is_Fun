@@ -12,30 +12,33 @@ public class DropPosition : MonoBehaviour, IDropHandler
     [SerializeField]
     private List<string> _itemList = new List<string>();
     private Image _image;
-    private string _itemText;
+    private string _stateText;
+    [SerializeField]
+    private States _states;
 
     private void Start()
     {
+        _states = GetComponentInParent<States>();
+        if (_states == null)
+            Debug.LogError("There is no State script.");
+
         _image = GetComponent<Image>();
         if (_image == null)
             Debug.LogError("The Drop Posiiton does not have an image.");
 
-        PickItem();
+        AssignState();
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag.name == _itemText)
+        if (eventData.pointerDrag.name == _stateText)
         {
             eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
         }
     }
 
-    private void PickItem()
+    private void AssignState()
     {
-        int rand = Random.Range(0, _itemList.Count);
-        _itemText = _itemList[rand];
-        _itemText = "California";
-        //_itemTextField.text = _itemText;
+        _stateText = _states.GetCurrentState();
     }
 }
