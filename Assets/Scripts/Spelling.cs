@@ -27,15 +27,17 @@ public class Spelling : MonoBehaviour
     [SerializeField]
     private List<AudioClip> _words = new List<AudioClip>();
 
-    [SerializeField]
     private AudioClip _audioClip;
     private string _playerAnswer;
     private string _currentWord;
     private int _wordNumber = 0;
+    [SerializeField]
+    private List<AudioClip> _wordList = new List<AudioClip>();
 
     private void Start()
     {
-        ChooseWord();
+        //ChooseWord();
+        GenerateWordList();
     }
 
 
@@ -55,7 +57,26 @@ public class Spelling : MonoBehaviour
 
         _audioClip = _words[Random.Range(0, _words.Count)];
         _currentWord = _audioClip.name;
-        // Play the word after a brief pause
+        StartCoroutine(WordPause());
+    }
+
+    private void GenerateWordList()
+    {
+        int randIndex = 0;
+
+        for (int i = 0; i < 10; i++)
+        {
+            randIndex = Random.Range(0, _words.Count);
+            for (int j = 0; j < _wordList.Count; j++)
+            {
+                if (_wordList[j] == _words[randIndex])
+                {
+                    randIndex = Random.Range(0, _words.Count);
+                    continue;
+                }
+            }
+            _wordList.Add(_words[randIndex]);
+        }
     }
 
     public void CheckWord()
@@ -83,5 +104,11 @@ public class Spelling : MonoBehaviour
     private void FinishGame()
     {
         Debug.Log("The game is over.");
+    }
+
+    IEnumerator WordPause()
+    {
+        yield return new WaitForSeconds(0.25f);
+        PlayWord();
     }
 }
