@@ -3317,7 +3317,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 05ffd02cb48c3b44390ece9924ce913a, type: 3}
   - {fileID: 8300000, guid: 898fea7cb3826954dafbf296085bad6a, type: 3}
   - {fileID: 8300000, guid: 49e80928129924941be0a67470f23749, type: 3}
-  _audioClip: {fileID: 8300000, guid: 71dbcfa2738c60143814f4e3a41b23d4, type: 3}
+  _wordList: []
 --- !u!1 &355968329
 GameObject:
   m_ObjectHideFlags: 0
@@ -10542,7 +10542,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 315038598}
         m_TargetAssemblyTypeName: Spelling, Assembly-CSharp
-        m_MethodName: ChooseWord
+        m_MethodName: NextWord
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17818,7 +17818,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c593dd739756ede4db850b435343e690, type: 2}
   m_sharedMaterial: {fileID: 3989025587047096196, guid: c593dd739756ede4db850b435343e690, type: 2}

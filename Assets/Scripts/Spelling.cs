@@ -30,32 +30,35 @@ public class Spelling : MonoBehaviour
     private AudioClip _audioClip;
     private string _playerAnswer;
     private string _currentWord;
-    private int _wordNumber = 0;
+    private int _wordNumber = 1;
     [SerializeField]
     private List<AudioClip> _wordList = new List<AudioClip>();
 
     private void Start()
     {
-        //ChooseWord();
         GenerateWordList();
     }
 
 
-    public void ChooseWord()
+    public void NextWord()
     {
         if (_wordNumber < 10)
             _wordNumber++;
         else
             FinishGame();
 
+        _wordNumberText.text = _wordNumber.ToString();
+        _audioClip = _wordList[_wordNumber - 1];
+        SetWord();
+    }
+
+    private void SetWord()
+    {
         _feedbackText.text = null;
         _playerInput.text = null;
         _nextWordButton.SetActive(false);
         _playWordButton.SetActive(true);
         _checkWordButton.SetActive(true);
-        _wordNumberText.text = _wordNumber.ToString();
-
-        _audioClip = _words[Random.Range(0, _words.Count)];
         _currentWord = _audioClip.name;
         StartCoroutine(WordPause());
     }
@@ -77,6 +80,8 @@ public class Spelling : MonoBehaviour
             }
             _wordList.Add(_words[randIndex]);
         }
+        _audioClip = _wordList[0];
+        SetWord();
     }
 
     public void CheckWord()
