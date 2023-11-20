@@ -3320,6 +3320,35 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 49e80928129924941be0a67470f23749, type: 3}
   _wordsTest:
   - {fileID: 11400000, guid: 3fea52cc0c4083e42990daccff1e6695, type: 2}
+  - {fileID: 11400000, guid: c5318f515ced1be44a48aa974818bc16, type: 2}
+  - {fileID: 11400000, guid: de10dabde7237e3418ebcb945a685ab0, type: 2}
+  - {fileID: 11400000, guid: bb12e9f762ebc604fba839a0bfdd2452, type: 2}
+  - {fileID: 11400000, guid: 7a11da8afbb94ee44bc31a7a009aa8d1, type: 2}
+  - {fileID: 11400000, guid: 7c2a6569b4abd9c41978d6bd31f34ee1, type: 2}
+  - {fileID: 11400000, guid: dfe29e6d704bd294889d3501235b6cb6, type: 2}
+  - {fileID: 11400000, guid: 8731de742a025c24c97f6765ea569c79, type: 2}
+  - {fileID: 11400000, guid: 2ab9ee96ce53f2d49926617393d7e035, type: 2}
+  - {fileID: 11400000, guid: 381f7edab8898704bafe023362124962, type: 2}
+  - {fileID: 11400000, guid: 1d7e05e924488b64dbc7e242d6827fd7, type: 2}
+  - {fileID: 11400000, guid: c85f2131383c8ae48ab86abb9f6cd6b3, type: 2}
+  - {fileID: 11400000, guid: 8b4543c4d4f734a43b5fa4034629995c, type: 2}
+  - {fileID: 11400000, guid: 3c57a6e35afaf42478d24368d7b63dd8, type: 2}
+  - {fileID: 11400000, guid: 9cf9b7c5d76bb2a46a5c2c8f5599fa45, type: 2}
+  - {fileID: 11400000, guid: 612cee25a70f0ca42900dd5d28cda1f5, type: 2}
+  - {fileID: 11400000, guid: 845f558cef503b341864aa588b1aea2f, type: 2}
+  - {fileID: 11400000, guid: 52665aaeb1b0d2541bc9ba3dc2de0b06, type: 2}
+  - {fileID: 11400000, guid: 2da7cff30bf52f743ad4e17c6cebff04, type: 2}
+  - {fileID: 11400000, guid: 2e2a098a420bc6f409ad45bca4472149, type: 2}
+  - {fileID: 11400000, guid: 3c376613b3785384792d86eb79276637, type: 2}
+  - {fileID: 11400000, guid: 5245997ab8413c841a3e85922ad2408e, type: 2}
+  - {fileID: 11400000, guid: 08ca3633408c30545a590c1f3121ac6b, type: 2}
+  - {fileID: 11400000, guid: 3d15893633a349245a3ea08092ffde55, type: 2}
+  - {fileID: 11400000, guid: bc46bd5597993b340a69968bf1e6d7f9, type: 2}
+  - {fileID: 11400000, guid: 0efca78cffcf26c4095a4b355bd6b782, type: 2}
+  - {fileID: 11400000, guid: 588cef261ed86a94e8f6aedb619757da, type: 2}
+  - {fileID: 11400000, guid: 397ac33fbed14a945bed8e4e6a51669a, type: 2}
+  - {fileID: 11400000, guid: ddbe49d7ca3dd37479826fa8260fa14c, type: 2}
+  - {fileID: 11400000, guid: a335fe3ae296e144e83920f4489e4962, type: 2}
   _wordList: []
   _wordListTest: []
 --- !u!1 &355968329
@@ -11863,7 +11892,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -13787,7 +13816,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 315038598}
         m_TargetAssemblyTypeName: Spelling, Assembly-CSharp
-        m_MethodName: NextWord
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
