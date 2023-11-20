@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b047b783512bf545acdde2a1103cbf8, type: 3}
   m_Name: cry
   m_EditorClassIdentifier: 
-  _spelling1: babyed
-  _spelling2: babbied
-  _spelling3: babied
-  _word: babied
-  _spokenWord: {fileID: 8300000, guid: 71dbcfa2738c60143814f4e3a41b23d4, type: 3}
+  _spelling1: crie
+  _spelling2: creye
+  _word: cry
+  _spokenWord: {fileID: 8300000, guid: be1f2110892fec7419e7597a2aca18b4, type: 3}

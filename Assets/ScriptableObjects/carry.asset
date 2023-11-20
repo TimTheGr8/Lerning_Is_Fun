@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b047b783512bf545acdde2a1103cbf8, type: 3}
   m_Name: carry
   m_EditorClassIdentifier: 
-  _spelling1: babyed
-  _spelling2: babbied
-  _spelling3: babied
-  _word: babied
-  _spokenWord: {fileID: 8300000, guid: 71dbcfa2738c60143814f4e3a41b23d4, type: 3}
+  _spelling1: carrrie
+  _spelling2: cary
+  _word: carry
+  _spokenWord: {fileID: 8300000, guid: fc7100c51df50e64ebc40f0a81650248, type: 3}
