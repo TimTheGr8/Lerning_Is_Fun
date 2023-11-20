@@ -26,6 +26,8 @@ public class Spelling : MonoBehaviour
     private GameObject _playWordButton;
     [SerializeField]
     private List<AudioClip> _words = new List<AudioClip>();
+    [SerializeField]
+    private List<TestSO> _wordsTest = new List<TestSO>();
 
     private AudioClip _audioClip;
     private string _playerAnswer;
@@ -33,10 +35,12 @@ public class Spelling : MonoBehaviour
     private int _wordNumber = 1;
     [SerializeField]
     private List<AudioClip> _wordList = new List<AudioClip>();
+    [SerializeField]
+    private List<AudioClip> _wordListTest = new List<AudioClip>();
 
     private void Start()
     {
-        GenerateWordList();
+        GenerateWordListTest();
     }
 
 
@@ -58,7 +62,7 @@ public class Spelling : MonoBehaviour
         _playerInput.text = null;
         _nextWordButton.SetActive(false);
         _playWordButton.SetActive(true);
-        _checkWordButton.SetActive(true);
+        //_checkWordButton.SetActive(true);
         _currentWord = _audioClip.name;
         StartCoroutine(WordPause());
     }
@@ -81,6 +85,27 @@ public class Spelling : MonoBehaviour
             _wordList.Add(_words[randIndex]);
         }
         _audioClip = _wordList[0];
+        SetWord();
+    }
+
+    private void GenerateWordListTest()
+    {
+        int randIndex = 0;
+
+        for (int i = 0; i < 10; i++)
+        {
+            randIndex = Random.Range(0, _wordsTest.Count);
+            for (int j = 0; j < _wordListTest.Count; j++)
+            {
+                if (_wordListTest[j] == _wordsTest[randIndex])
+                {
+                    randIndex = Random.Range(0, _wordsTest.Count);
+                    continue;
+                }
+            }
+            _wordListTest.Add(_wordsTest[randIndex].GetAudioClip());
+        }
+        _audioClip = _wordListTest[0];
         SetWord();
     }
 
