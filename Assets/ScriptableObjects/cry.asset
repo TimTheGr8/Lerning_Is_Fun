@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: crie
   _spelling2: creye
   _word: cry
+  _wordSpelling:
+  - crie
+  - creye
+  - cry
   _spokenWord: {fileID: 8300000, guid: be1f2110892fec7419e7597a2aca18b4, type: 3}

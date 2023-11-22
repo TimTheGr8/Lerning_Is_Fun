@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: brodway
   _spelling2: braodway
   _word: broadway
+  _wordSpelling:
+  - brodway
+  - braodway
+  - broadway
   _spokenWord: {fileID: 8300000, guid: d6a9c75328344db4b8b9844cf147fd57, type: 3}

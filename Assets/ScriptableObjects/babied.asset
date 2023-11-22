@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spelling1: babyed
   _spelling2: babbied
-  _spelling3: babied
   _word: babied
+  _wordSpelling:
+  - babyed
+  - babbied
+  - babied
   _spokenWord: {fileID: 8300000, guid: 71dbcfa2738c60143814f4e3a41b23d4, type: 3}

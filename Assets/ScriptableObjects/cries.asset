@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: cryes
   _spelling2: creis
   _word: cries
+  _wordSpelling:
+  - cryes
+  - creis
+  - cries
   _spokenWord: {fileID: 8300000, guid: 8d5ba90d7c2f468498daa62ce91059a2, type: 3}

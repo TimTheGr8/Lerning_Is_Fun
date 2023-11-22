@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: carrrie
   _spelling2: cary
   _word: carry
+  _wordSpelling:
+  - carrrie
+  - cary
+  - carry
   _spokenWord: {fileID: 8300000, guid: fc7100c51df50e64ebc40f0a81650248, type: 3}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -25,22 +26,23 @@ public class Spelling : MonoBehaviour
     [SerializeField]
     private GameObject _playWordButton;
     [SerializeField]
-    private List<AudioClip> _words = new List<AudioClip>();
+    private List<TestSO> _words = new List<TestSO>();
     [SerializeField]
-    private List<TestSO> _wordsTest = new List<TestSO>();
+    private List<TMP_Text> _answerButtonsText = new List<TMP_Text>();
 
     private AudioClip _audioClip;
     private string _playerAnswer;
     private string _currentWord;
     private int _wordNumber = 1;
     [SerializeField]
-    private List<AudioClip> _wordList = new List<AudioClip>();
+    private List<TestSO> _wordListTest = new List<TestSO>();
     [SerializeField]
-    private List<AudioClip> _wordListTest = new List<AudioClip>();
+    private List<AudioClip> _wordList = new List<AudioClip>();
+    private TestSO _currentWordSpelling;
 
     private void Start()
     {
-        GenerateWordListTest();
+        GenerateWordList();
     }
 
 
@@ -52,7 +54,8 @@ public class Spelling : MonoBehaviour
             FinishGame();
 
         _wordNumberText.text = _wordNumber.ToString();
-        _audioClip = _wordList[_wordNumber - 1];
+        _audioClip = _wordListTest[_wordNumber - 1].GetAudioClip();
+        _currentWordSpelling = _wordListTest[_wordNumber - 1];
         SetWord();
     }
 
@@ -62,9 +65,9 @@ public class Spelling : MonoBehaviour
         _playerInput.text = null;
         _nextWordButton.SetActive(false);
         _playWordButton.SetActive(true);
-        //_checkWordButton.SetActive(true);
         _currentWord = _audioClip.name;
         StartCoroutine(WordPause());
+        AssignButtonText();
     }
 
     private void GenerateWordList()
@@ -82,31 +85,21 @@ public class Spelling : MonoBehaviour
                     continue;
                 }
             }
-            _wordList.Add(_words[randIndex]);
+            _wordListTest.Add(_words[randIndex]);
         }
-        _audioClip = _wordList[0];
+        _audioClip = _wordListTest[0].GetAudioClip();
+        _currentWordSpelling = _wordListTest[0];
         SetWord();
     }
 
-    private void GenerateWordListTest()
+    private void AssignButtonText()
     {
-        int randIndex = 0;
+        List<string> spelling = _wordListTest[_wordNumber - 1].GetSpelling();
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < _answerButtonsText.Count; i++)
         {
-            randIndex = Random.Range(0, _wordsTest.Count);
-            for (int j = 0; j < _wordListTest.Count; j++)
-            {
-                if (_wordListTest[j] == _wordsTest[randIndex])
-                {
-                    randIndex = Random.Range(0, _wordsTest.Count);
-                    continue;
-                }
-            }
-            _wordListTest.Add(_wordsTest[randIndex].GetAudioClip());
+            _answerButtonsText[i].text = spelling[i];
         }
-        _audioClip = _wordListTest[0];
-        SetWord();
     }
 
     public void CheckWord()

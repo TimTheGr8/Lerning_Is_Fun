@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: croud
   _spelling2: cruod
   _word: crowd
+  _wordSpelling:
+  - croud
+  - cruod
+  - crowd
   _spokenWord: {fileID: 8300000, guid: de8b4520221d29a4f8cd88e0b71d253f, type: 3}

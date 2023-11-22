@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: cryed
   _spelling2: cried
   _word: cried
+  _wordSpelling:
+  - cryed
+  - cried
+  - cried
   _spokenWord: {fileID: 8300000, guid: 0afd07fa7f2fe0445acf6887e78aeb84, type: 3}

@@ -11,11 +11,19 @@ public class TestSO : ScriptableObject
     private string _spelling2;
     [SerializeField]
     private string _word;
+
+    [SerializeField]
+    private List<string> _wordSpelling = new List<string>();
     
     public AudioClip _spokenWord;
 
     public AudioClip GetAudioClip()
     {
         return _spokenWord;
+    }
+
+    public List<string> GetSpelling()
+    {
+        return _wordSpelling;
     }
 }

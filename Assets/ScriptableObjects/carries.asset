@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: caries
   _spelling2: carees
   _word: carries
+  _wordSpelling:
+  - caries
+  - carees
+  - carries
   _spokenWord: {fileID: 8300000, guid: e92800d55c9eab140b35d87ddca365db, type: 3}

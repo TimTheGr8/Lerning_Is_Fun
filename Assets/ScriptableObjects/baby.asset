@@ -15,4 +15,8 @@ MonoBehaviour:
   _spelling1: babee
   _spelling2: babby
   _word: baby
+  _wordSpelling:
+  - babee
+  - babby
+  - baby
   _spokenWord: {fileID: 8300000, guid: 63d2d72749cfbd64e90ee83b882273b6, type: 3}
