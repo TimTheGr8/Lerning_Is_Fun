@@ -12,8 +12,6 @@ public class Spelling : MonoBehaviour
     [SerializeField]
     private GameObject _game;
     [SerializeField]
-    private TMP_InputField _playerInput; 
-    [SerializeField]
     private AudioSource _audio;
     [SerializeField]
     private TMP_Text _feedbackText;
@@ -26,7 +24,9 @@ public class Spelling : MonoBehaviour
     [SerializeField]
     private GameObject _playWordButton;
     [SerializeField]
-    private List<TestSO> _words = new List<TestSO>();
+    private List<WordSO> _words = new List<WordSO>();
+    [SerializeField]
+    private List<GameObject> _answerButtons = new List<GameObject>();
     [SerializeField]
     private List<TMP_Text> _answerButtonsText = new List<TMP_Text>();
 
@@ -34,11 +34,8 @@ public class Spelling : MonoBehaviour
     private string _playerAnswer;
     private string _currentWord;
     private int _wordNumber = 1;
-    [SerializeField]
-    private List<TestSO> _wordListTest = new List<TestSO>();
-    [SerializeField]
-    private List<AudioClip> _wordList = new List<AudioClip>();
-    private TestSO _currentWordSpelling;
+    private List<WordSO> _wordList = new List<WordSO>();
+    private WordSO _currentWordSpelling;
 
     private void Start()
     {
@@ -54,17 +51,20 @@ public class Spelling : MonoBehaviour
             FinishGame();
 
         _wordNumberText.text = _wordNumber.ToString();
-        _audioClip = _wordListTest[_wordNumber - 1].GetAudioClip();
-        _currentWordSpelling = _wordListTest[_wordNumber - 1];
+        _audioClip = _wordList[_wordNumber - 1].GetAudioClip();
+        _currentWordSpelling = _wordList[_wordNumber - 1];
         SetWord();
     }
 
     private void SetWord()
     {
         _feedbackText.text = null;
-        _playerInput.text = null;
         _nextWordButton.SetActive(false);
         _playWordButton.SetActive(true);
+        foreach (var button in _answerButtons)
+        {
+            button.SetActive(true);
+        }
         _currentWord = _audioClip.name;
         StartCoroutine(WordPause());
         AssignButtonText();
@@ -85,16 +85,17 @@ public class Spelling : MonoBehaviour
                     continue;
                 }
             }
-            _wordListTest.Add(_words[randIndex]);
+            _wordList.Add(_words[randIndex]);
         }
-        _audioClip = _wordListTest[0].GetAudioClip();
-        _currentWordSpelling = _wordListTest[0];
+        _audioClip = _wordList[0].GetAudioClip();
+        _currentWordSpelling = _wordList[0];
         SetWord();
     }
 
     private void AssignButtonText()
     {
-        List<string> spelling = _wordListTest[_wordNumber - 1].GetSpelling();
+        List<string> spelling = _wordList[_wordNumber - 1].GetSpelling();
+        Shuffle(spelling);
 
         for (int i = 0; i < _answerButtonsText.Count; i++)
         {
@@ -102,13 +103,29 @@ public class Spelling : MonoBehaviour
         }
     }
 
-    public void CheckWord()
+    public void Shuffle(List<string> words)
     {
+        var count = words.Count;
+        var last = count - 1;
+        for (var i = 0; i < last; ++i)
+        {
+            var r = Random.Range(i, count);
+            var tmp = words[i];
+            words[i] = words[r];
+            words[r] = tmp;
+        }
+    }
+
+    public void CheckWord(int buttonNumber)
+    {
+        foreach (var button in _answerButtons)
+        {
+            button.SetActive(false);
+        }
         _playWordButton.SetActive(false);
-        _checkWordButton.SetActive(false);
         _nextWordButton.SetActive(true);
 
-        _playerAnswer = _playerInput.text;
+        _playerAnswer = _answerButtonsText[buttonNumber].text;
         if(_playerAnswer == _currentWord)
         {
             _feedbackText.text = "That is correct!";
@@ -126,7 +143,7 @@ public class Spelling : MonoBehaviour
 
     private void FinishGame()
     {
-        Debug.Log("The game is over.");
+        GameManager.Instance.ShowResults();
     }
 
     IEnumerator WordPause()
