@@ -28,6 +28,8 @@ public class States : MonoBehaviour
     private List<StatesSO> _westStates = new List<StatesSO>();
     [SerializeField]
     private List<TMP_Text> _stateNames = new List<TMP_Text>();
+    [SerializeField]
+    private List<Transform> _stateNameStartingPosition = new List<Transform>();
     
     private List<StatesSO> _currentSateRegion = new List<StatesSO>();
     private string _currentRegionName = "";
@@ -41,8 +43,6 @@ public class States : MonoBehaviour
 
     private void ChooseState()
     {
-        //List<StatesSO> stateRegion = null;
-
         switch (_currentRegionName)
         {
             case "Midwest":
@@ -68,8 +68,21 @@ public class States : MonoBehaviour
         Shuffle(_currentSateRegion);
         SetCurrentState();
     }
-    //TODO: Fix this to work with the states
+
     public void Shuffle(List<StatesSO> states)
+    {
+        var count = states.Count;
+        var last = count - 1;
+        for (var i = 0; i < last; ++i)
+        {
+            var r = Random.Range(i, count);
+            var tmp = states[i];
+            states[i] = states[r];
+            states[r] = tmp;
+        }
+    }
+
+    public void Shuffle(List<string> states)
     {
         var count = states.Count;
         var last = count - 1;
@@ -84,27 +97,42 @@ public class States : MonoBehaviour
 
     private void SetCurrentState()
     {
+        List<string> stateNamesHolder = new List<string>();
+        var testName = "";
         _currentStateSprite.sprite = _currentSateRegion[_currentIndex].GetStateSprite();
-        _stateNames[0].text = _currentSateRegion[_currentIndex].GetStateName();
+        stateNamesHolder.Add(_currentSateRegion[_currentIndex].GetStateName());
+        //_stateNames[0].text = _currentSateRegion[_currentIndex].GetStateName();
         for (int i = 1; i < 4; i++)
-        { //TODO: Need to check the current name against the first one in the list
-            // Also need to randomize the order of the answers 
+        { 
             var rand = Random.Range(0, _currentSateRegion.Count);
             for (int j = 0; j < _stateNames.Count; j++)
             {
-                if (_stateNames[i] == _stateNames[j])
+                testName = _currentSateRegion[rand].GetStateName();
+                if (_stateNames[j] == _stateNames[i] || _stateNames[0] == _stateNames[j])
                 {
                     rand = Random.Range(0, _currentSateRegion.Count);
+                    testName = _currentSateRegion[rand].GetStateName();
                     continue;
                 }
             }
-            _stateNames[i].text = _currentSateRegion[rand].GetStateName();
+            stateNamesHolder.Add(testName);
+            //_stateNames[i].text = testName;
+        }
+        Shuffle(stateNamesHolder);
+        for (int i = 0; i < _stateNames.Count; i++)
+        {
+            _stateNames[i].text = stateNamesHolder[i];
         }
     }
 
     public string GetCurrentState()
     {
         return _currentSateRegion[_currentIndex].GetStateSprite().name;
+    }
+
+    public void NextQuestion()
+    {
+
     }
 
     public void AssignRegion(string region)
