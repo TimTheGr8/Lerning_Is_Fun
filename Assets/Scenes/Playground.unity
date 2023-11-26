@@ -182,8 +182,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Listen to the word and spell it in the answer box. Press enter when you
-    are done.
+  m_text: Listen to the word. You can press the Play Word button to hear the word
+    again. Then click on the correct spelling.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c593dd739756ede4db850b435343e690, type: 2}
   m_sharedMaterial: {fileID: 3989025587047096196, guid: c593dd739756ede4db850b435343e690, type: 2}
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -936,7 +936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &104144885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2129,7 +2129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &226466774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2304,7 +2304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &253650337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13099,7 +13099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1546259803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13378,7 +13378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -125}
+  m_AnchoredPosition: {x: 0, y: -156}
   m_SizeDelta: {x: 141.8496, y: 107.0563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1553378134
@@ -13445,7 +13445,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1553378136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 315038598}
+        m_TargetAssemblyTypeName: Spelling, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1553378136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17638,6 +17650,7 @@ GameObject:
   - component: {fileID: 2086148404}
   - component: {fileID: 2086148406}
   - component: {fileID: 2086148405}
+  - component: {fileID: 2086148407}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -17695,6 +17708,19 @@ MonoBehaviour:
   _mathScreen: {fileID: 630842053}
   _spellingScreen: {fileID: 315038593}
   _statesScreen: {fileID: 953258747}
+  _stats: {fileID: 11400000, guid: e6510cdf14b6c9a46817ba75a7c9c69f, type: 2}
+--- !u!114 &2086148407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086148403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974c3b9c2b80a5e4e96d5cd860d55b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2108334163
 GameObject:
   m_ObjectHideFlags: 0

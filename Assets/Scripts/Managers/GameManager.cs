@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     private GameObject _spellingScreen;
     [SerializeField]
     private GameObject _statesScreen;
+    [SerializeField]
+    private StatsSO _stats;
 
     private string _currentSubject;
     private int _correctAnswers;
@@ -49,6 +51,7 @@ public class GameManager : MonoBehaviour
 
     public void SetCurrentSubject(string subject)
     {
+
         PlayerPrefs.SetString("Subject", subject);
     }
 

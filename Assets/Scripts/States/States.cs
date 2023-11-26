@@ -17,15 +17,17 @@ public class States : MonoBehaviour
     [SerializeField]
     private Image _currentState;
     [SerializeField]
-    private List<Sprite> _midwestStates = new List<Sprite>();
+    private List<StatesSO> _midwestStates = new List<StatesSO>();
     [SerializeField]
-    private List<Sprite> _northeastStates = new List<Sprite>();
+    private List<StatesSO> _northeastStates = new List<StatesSO>();
     [SerializeField]
-    private List<Sprite> _southeastStates = new List<Sprite>();
+    private List<StatesSO> _southeastStates = new List<StatesSO>();
     [SerializeField]
-    private List<Sprite> _southwestStates = new List<Sprite>();
+    private List<StatesSO> _southwestStates = new List<StatesSO>();
     [SerializeField]
-    private List<Sprite> _westStates = new List<Sprite>();
+    private List<StatesSO> _westStates = new List<StatesSO>();
+    [SerializeField]
+    private List<TMP_Text> _stateNames = new List<TMP_Text>();
 
 
     private string _currentRegion = "";
@@ -37,7 +39,7 @@ public class States : MonoBehaviour
 
     private void ChooseState()
     {
-        List<Sprite> stateRegion = null;
+        List<StatesSO> stateRegion = null;
 
         switch (_currentRegion)
         {
@@ -62,7 +64,8 @@ public class States : MonoBehaviour
         }
 
         int rand = Random.Range(0, stateRegion.Count);
-        _currentState.sprite = stateRegion[rand];
+        /////////////////   Fix this to get the current srpite from the state scriptable object   \\\\\\\\\\\\\\\\\\\\\\\\\\\
+        //_currentState.sprite = stateRegion[rand];
     }
 
     public string GetCurrentState()

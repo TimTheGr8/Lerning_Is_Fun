@@ -39,7 +39,7 @@ public class Spelling : MonoBehaviour
 
     private void Start()
     {
-        GenerateWordList();
+        
     }
 
 
@@ -134,6 +134,13 @@ public class Spelling : MonoBehaviour
         {
             _feedbackText.text = $"The correct spelling is {_currentWord}";
         }
+    }
+
+    public void StartGame()
+    {
+        _instructions.SetActive(false);
+        _game.SetActive(true);
+        GenerateWordList();
     }
 
     public void PlayWord()

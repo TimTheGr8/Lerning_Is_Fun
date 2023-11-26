@@ -12,7 +12,7 @@ public class Stats : MonoBehaviour
         {
             if (_instance == null)
             {
-                Debug.LogError("GameManager is NULL");
+                Debug.LogError("Stats is NULL");
             }
             return _instance;
         }
