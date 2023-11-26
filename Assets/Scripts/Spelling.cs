@@ -37,12 +37,6 @@ public class Spelling : MonoBehaviour
     private List<WordSO> _wordList = new List<WordSO>();
     private WordSO _currentWordSpelling;
 
-    private void Start()
-    {
-        
-    }
-
-
     public void NextWord()
     {
         if (_wordNumber < 10)

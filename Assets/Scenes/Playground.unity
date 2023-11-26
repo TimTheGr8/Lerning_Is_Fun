@@ -1444,11 +1444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211badd01395ce6418ed1ae2ad7c102d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemTextField: {fileID: 0}
-  _itemList:
-  - Arizona
-  - California
-  _states: {fileID: 0}
+  _stateText: 
+  _states: {fileID: 953258752}
 --- !u!1 &149260125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,7 +1763,7 @@ GameObject:
   - component: {fileID: 198565494}
   - component: {fileID: 198565493}
   m_Layer: 5
-  m_Name: State
+  m_Name: State_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2559,7 +2556,7 @@ GameObject:
   - component: {fileID: 271547177}
   - component: {fileID: 271547176}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: State_2_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2668,7 +2665,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -4.814867, z: 0, w: 1.4814949}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3845,7 +3842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &497107350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4268,7 +4265,7 @@ GameObject:
   - component: {fileID: 565014649}
   - component: {fileID: 565014651}
   m_Layer: 5
-  m_Name: State
+  m_Name: State_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7572,7 +7569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &953258748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7673,62 +7670,67 @@ MonoBehaviour:
   _instructionsText: {fileID: 1818284428}
   _regionSelect: {fileID: 982463913}
   _game: {fileID: 497107349}
-  _currentState: {fileID: 637609411}
+  _currentStateSprite: {fileID: 637609411}
   _midwestStates:
-  - {fileID: 21300000, guid: 44e7b6bc17160304890dad564af91461, type: 3}
-  - {fileID: 21300000, guid: 6e35ff4341cd6204d99f6c663f71320e, type: 3}
-  - {fileID: 21300000, guid: 5a7b5d90ecfd07d45a1e6db061b09b37, type: 3}
-  - {fileID: 21300000, guid: e715d1a762d32114bbf94a877dbfed1b, type: 3}
-  - {fileID: 21300000, guid: 0f3fb3acd4c1369469898c8caac47d4e, type: 3}
-  - {fileID: 21300000, guid: 60e0ba70e847194469a93c210314b319, type: 3}
-  - {fileID: 21300000, guid: 9fd01e9f645daff41b7e1e5340f70c87, type: 3}
-  - {fileID: 21300000, guid: eff98f7defb211d4b9901e8da3e81e0c, type: 3}
-  - {fileID: 21300000, guid: 806da223d614829409bf5d330ea5484c, type: 3}
-  - {fileID: 21300000, guid: 2031f45b98f5065438cccb8a9c09cd6f, type: 3}
-  - {fileID: 21300000, guid: 2af351e04fa035145add8ba9fa76a8e2, type: 3}
-  - {fileID: 21300000, guid: 100e233ccfd2ef74f9da6160d1c0b603, type: 3}
+  - {fileID: 11400000, guid: 4d893a19393724f41bc2c8769c9dc9bb, type: 2}
+  - {fileID: 11400000, guid: 9ae5f310c88dfdd41b446ed93d20226f, type: 2}
+  - {fileID: 11400000, guid: dbe0f6ce68ef7274b8da07c6894ca957, type: 2}
+  - {fileID: 11400000, guid: cc621b176145a324c972fe2fee925276, type: 2}
+  - {fileID: 11400000, guid: bfe298d0ab5785e41870fe9ef99c0c1a, type: 2}
+  - {fileID: 11400000, guid: a9d99999db073e3458206343db90afbc, type: 2}
+  - {fileID: 11400000, guid: 9ce3af29316b7764f8171cb017c21274, type: 2}
+  - {fileID: 11400000, guid: 8d3ee067e1ab50241a1a22ed3755a75f, type: 2}
+  - {fileID: 11400000, guid: 44c8f45796f0b5e408df3d99f9585f18, type: 2}
+  - {fileID: 11400000, guid: ef52016baca91df448de76f7438df06c, type: 2}
+  - {fileID: 11400000, guid: 86fd0a8bc448482429845bb32943f030, type: 2}
+  - {fileID: 11400000, guid: 79a9011aa971a054695878f4faa0e9d4, type: 2}
   _northeastStates:
-  - {fileID: 21300000, guid: 1dea27745ab41504590e19ddcef5a325, type: 3}
-  - {fileID: 21300000, guid: 626caf1db0fc3764ca9c9e5fd3da3535, type: 3}
-  - {fileID: 21300000, guid: e8f9f0408f6cbe14b80a5cc6d217e462, type: 3}
-  - {fileID: 21300000, guid: 766d974c65019334d9bcd3bb45dfa616, type: 3}
-  - {fileID: 21300000, guid: 814c136dcc59d79418064d475469fe99, type: 3}
-  - {fileID: 21300000, guid: 26b8b940709dd454089e0af7b28ca9e3, type: 3}
-  - {fileID: 21300000, guid: 7be0ead757282bd4e8ee5bd01232f8ab, type: 3}
-  - {fileID: 21300000, guid: 597cb22fcb3ac0940a74b25d17d49916, type: 3}
-  - {fileID: 21300000, guid: 40d5ae06f2a21334eaad7a2d57979747, type: 3}
-  - {fileID: 21300000, guid: d770ad6cec294cf409bfa8789a321b2c, type: 3}
-  - {fileID: 21300000, guid: cd96d6659a4329d45be42bf2c97df588, type: 3}
+  - {fileID: 11400000, guid: 6d98ffffc02978d4db71c2c1b5c57138, type: 2}
+  - {fileID: 11400000, guid: 4f37068fa31c7f24e8b07ab17afd62a6, type: 2}
+  - {fileID: 11400000, guid: 584a72698c5cbf347a3e8a4bfe70c2a2, type: 2}
+  - {fileID: 11400000, guid: b94dbd0c42f42a146bc64204b5083955, type: 2}
+  - {fileID: 11400000, guid: f346e6a775586ce4290ecc3fda05e7d2, type: 2}
+  - {fileID: 11400000, guid: 03a526d560f13b64cb1bfabe99452be3, type: 2}
+  - {fileID: 11400000, guid: 947b0b6c04fdb0649b2d787595e97d5d, type: 2}
+  - {fileID: 11400000, guid: 95cf89f11f6d13b46a0b2d206fbd85ef, type: 2}
+  - {fileID: 11400000, guid: 4a060f09faae5a24691a9ed2ea41487d, type: 2}
+  - {fileID: 11400000, guid: 7c32d383caebe814a9b0c06c8e6736ab, type: 2}
+  - {fileID: 11400000, guid: e506593a4b8b16f42a09c3f3c8af797f, type: 2}
   _southeastStates:
-  - {fileID: 21300000, guid: a6d331d42c5ca704285883baed19ecf9, type: 3}
-  - {fileID: 21300000, guid: 4a3f989258fbfcd4d90742ffc9fa6792, type: 3}
-  - {fileID: 21300000, guid: 2fb8cfdbee9dd5a439f1dac27de5efff, type: 3}
-  - {fileID: 21300000, guid: 2e7972939c4bd14429777ca240c0cecf, type: 3}
-  - {fileID: 21300000, guid: 527bf8fa12a27cb49a7ed3e63a758bc4, type: 3}
-  - {fileID: 21300000, guid: 35fcc079e961dff4598c118d1504e8c5, type: 3}
-  - {fileID: 21300000, guid: 21cfb9ec76377d14ea28fe9837a57565, type: 3}
-  - {fileID: 21300000, guid: 1d86d4c814b90f14f8b7d87e885e70af, type: 3}
-  - {fileID: 21300000, guid: 1f6ba1f3c39a0ca4ba5d52dacf39141a, type: 3}
-  - {fileID: 21300000, guid: 00e7fca9d756a8a4a9b99d36a7d92836, type: 3}
-  - {fileID: 21300000, guid: af01436bbbeae9545a9ea7c02789552c, type: 3}
-  - {fileID: 21300000, guid: 10a50709642f80141ae93ca642547cee, type: 3}
+  - {fileID: 11400000, guid: 77275fd0e07e8a24fa3a4a2bb4064fcd, type: 2}
+  - {fileID: 11400000, guid: 6c1a44c3bbcdd604cba778a781c37818, type: 2}
+  - {fileID: 11400000, guid: 90b86faafbd0f9243bf12c83517d0661, type: 2}
+  - {fileID: 11400000, guid: f94105a952a410343ab1fefd7a13ccd6, type: 2}
+  - {fileID: 11400000, guid: 45990b801df1f594d9f33b032caef073, type: 2}
+  - {fileID: 11400000, guid: 04953ab48a0e48f4f9142d8e344930dd, type: 2}
+  - {fileID: 11400000, guid: 2d33745396d0c3147923bd3889d142d5, type: 2}
+  - {fileID: 11400000, guid: b1d1e1a47c422ba45b5ccfbd9f7a20e8, type: 2}
+  - {fileID: 11400000, guid: 1f326fda69a3cbb49b62d3c3b1314c6f, type: 2}
+  - {fileID: 11400000, guid: 8ba978ab5228de446a4173a60b054f22, type: 2}
+  - {fileID: 11400000, guid: 2cbc0e5671fb56841ae9f85591b337e5, type: 2}
+  - {fileID: 11400000, guid: ad991387a54f61d489e71d01ddbcbabc, type: 2}
   _southwestStates:
-  - {fileID: 21300000, guid: bc4052f2214446a4fa052bff8b2b6126, type: 3}
-  - {fileID: 21300000, guid: f0c4179f0e784aa429ff55cdab9319d3, type: 3}
-  - {fileID: 21300000, guid: bf8e0658e053a2549a0b3bb7bb58c442, type: 3}
-  - {fileID: 21300000, guid: f586d7cdbb7b2ee4aa932c998a479b1d, type: 3}
+  - {fileID: 11400000, guid: b461b0b79f740ac468bc200f20f49b9a, type: 2}
+  - {fileID: 11400000, guid: a984f9bc8d581134eaaae37754a6cada, type: 2}
+  - {fileID: 11400000, guid: cf00bbe3ca2b08246b4813fd3e93a016, type: 2}
+  - {fileID: 11400000, guid: 140a76751d787064287da7002e1f9c5b, type: 2}
   _westStates:
-  - {fileID: 21300000, guid: e256e42a8f8102144a7708d6563c342a, type: 3}
-  - {fileID: 21300000, guid: 6239bd9e38b92d943acdcbcd921f1a1f, type: 3}
-  - {fileID: 21300000, guid: d459acb13ac63da4985b589efd2bc55a, type: 3}
-  - {fileID: 21300000, guid: 721600fc9ee63e54e924b048992ddc89, type: 3}
-  - {fileID: 21300000, guid: cb942b883a35b9d4ebfa6e15b88a109f, type: 3}
-  - {fileID: 21300000, guid: 1ed2cdd6a264d9040930862759398d9e, type: 3}
-  - {fileID: 21300000, guid: 58a9e7bf64575094d82d71dd4a69dcee, type: 3}
-  - {fileID: 21300000, guid: 07ebfe7e07e4d174387313cb03119d38, type: 3}
-  - {fileID: 21300000, guid: 2384a39efa7df704098de7e3a1acf2b1, type: 3}
-  - {fileID: 21300000, guid: 08cc6e47a4f850a4cb9c224aceba1570, type: 3}
-  - {fileID: 21300000, guid: e81c56b0f20c59c48b67c417c03e8246, type: 3}
+  - {fileID: 11400000, guid: 307a29c5cfb01174ab691a8291e02897, type: 2}
+  - {fileID: 11400000, guid: a5383d6b3b52a7148b77d68b1f4d9cb6, type: 2}
+  - {fileID: 11400000, guid: 9b426b9ca29dd4745b97417d1c288875, type: 2}
+  - {fileID: 11400000, guid: 0f2ac038d6eaf614d8214d361d624ba9, type: 2}
+  - {fileID: 11400000, guid: 69e4c666d36e5044e9bb5c6a3577c445, type: 2}
+  - {fileID: 11400000, guid: 1d84b5f545d8fa24fb14517bf5bfdbd0, type: 2}
+  - {fileID: 11400000, guid: 5dfc111b4410f8245af0375fcdc07c4d, type: 2}
+  - {fileID: 11400000, guid: e1bf8575350847d438201b4e339ea299, type: 2}
+  - {fileID: 11400000, guid: a18c97b2880c3dd4898cee781dad4b50, type: 2}
+  - {fileID: 11400000, guid: 9b6bf363357b1ff408aefd0b3bfa190c, type: 2}
+  - {fileID: 11400000, guid: 6d69107712a42bc47ad5f84d8c252ef7, type: 2}
+  _stateNames:
+  - {fileID: 1222799842}
+  - {fileID: 1476638206}
+  - {fileID: 271547176}
+  - {fileID: 1565787954}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -10267,7 +10269,7 @@ GameObject:
   - component: {fileID: 1222799843}
   - component: {fileID: 1222799842}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: State_0_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10376,7 +10378,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -4.672827, z: 0, w: 1.5575991}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12282,7 +12284,7 @@ GameObject:
   - component: {fileID: 1476638207}
   - component: {fileID: 1476638206}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: State_1_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12391,7 +12393,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -4.672827, z: 0, w: 1.9470205}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13099,7 +13101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1546259803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13508,7 +13510,7 @@ GameObject:
   - component: {fileID: 1565787955}
   - component: {fileID: 1565787954}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: State_3_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13617,7 +13619,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -4.8148737, z: 0, w: 1.4815025}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -14600,7 +14602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1772014974
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14613,8 +14615,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 982463914}
   - {fileID: 1818284429}
+  - {fileID: 982463914}
   m_Father: {fileID: 1056514314}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15041,7 +15043,7 @@ GameObject:
   - component: {fileID: 1795948619}
   - component: {fileID: 1795948618}
   m_Layer: 5
-  m_Name: State
+  m_Name: State_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16310,7 +16312,7 @@ GameObject:
   - component: {fileID: 1907715994}
   - component: {fileID: 1907715993}
   m_Layer: 5
-  m_Name: State
+  m_Name: State_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17657,7 +17659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2086148404
 Transform:
   m_ObjectHideFlags: 0

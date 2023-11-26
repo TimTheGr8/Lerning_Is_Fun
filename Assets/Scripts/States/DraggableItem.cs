@@ -6,9 +6,6 @@ using UnityEngine.EventSystems;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [SerializeField]
-    private Image _imageDrop;
-
     private Vector3 _snapPosition;
     private Image _image;
 

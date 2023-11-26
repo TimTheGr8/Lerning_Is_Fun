@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cf0e29317cd6445a0ca7adc750ff91, type: 3}
   m_Name: Arizona
   m_EditorClassIdentifier: 
-  _stateName: 
-  _stateSprite: {fileID: 0}
+  _stateName: Arizona
+  _stateSprite: {fileID: 21300000, guid: bc4052f2214446a4fa052bff8b2b6126, type: 3}

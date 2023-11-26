@@ -15,4 +15,9 @@ public class StatesSO : ScriptableObject
     {
         return _stateName;
     }
+
+    public Sprite GetStateSprite()
+    {
+        return _stateSprite;
+    }
 }

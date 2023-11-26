@@ -5,19 +5,21 @@ using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DropPosition : MonoBehaviour, IDropHandler
+public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField]
-    private TMP_Text _itemTextField;
-    [SerializeField]
-    private List<string> _itemList = new List<string>();
-    private Image _image;
-    private string _stateText;
     [SerializeField]
     private States _states;
 
+    private Image _image;
+    private string _stateText;
+    private GameObject _dropPositionText;
+
     private void Start()
     {
+        _dropPositionText = GetComponentInChildren<TMP_Text>().gameObject;
+        if (_dropPositionText == null)
+            Debug.LogError("There is no drop location text.");
+
         _states = GetComponentInParent<States>();
         if (_states == null)
             Debug.LogError("There is no State script.");
@@ -31,7 +33,8 @@ public class DropPosition : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag.name == _stateText)
+        string playerAnswer = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().text;
+        if ( playerAnswer == _stateText)
         {
             eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
         }
@@ -40,5 +43,15 @@ public class DropPosition : MonoBehaviour, IDropHandler
     private void AssignState()
     {
         _stateText = _states.GetCurrentState();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        _dropPositionText.SetActive(false);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        _dropPositionText.SetActive(true);
     }
 }
