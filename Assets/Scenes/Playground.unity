@@ -7764,16 +7764,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a18c97b2880c3dd4898cee781dad4b50, type: 2}
   - {fileID: 11400000, guid: 9b6bf363357b1ff408aefd0b3bfa190c, type: 2}
   - {fileID: 11400000, guid: 6d69107712a42bc47ad5f84d8c252ef7, type: 2}
-  _stateNames:
-  - {fileID: 1222799842}
-  - {fileID: 1476638206}
-  - {fileID: 271547176}
-  - {fileID: 1565787954}
-  _stateNameStartingPosition:
-  - {fileID: 1539009196}
-  - {fileID: 1861298467}
-  - {fileID: 1356655428}
-  - {fileID: 1948074338}
+  _answers:
+  - {fileID: 565014647}
+  - {fileID: 1907715991}
+  - {fileID: 198565491}
+  - {fileID: 1795948616}
+  _answerStartingPosition:
+  - {fileID: 565014648}
+  - {fileID: 1907715992}
+  - {fileID: 198565492}
+  - {fileID: 1795948617}
+  _tempList: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

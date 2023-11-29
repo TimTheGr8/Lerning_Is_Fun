@@ -14,7 +14,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         _image = GetComponent<Image>();
         if (_image == null)
             Debug.LogError("This Draggable object does not have an Image.");
-        _snapPosition = _image.rectTransform.localPosition;
     }
 
     public void ResetPosition()
@@ -41,5 +40,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnBeginDrag(PointerEventData eventData)
     {
         _image.raycastTarget = false;
+    }
+
+    public void SetSnapPosition()
+    {
+        _snapPosition = _image.rectTransform.localPosition;
     }
 }
