@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Vector3 _snapPosition;
+    [SerializeField]
     private Image _image;
 
     private void Start()
@@ -14,6 +15,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         _image = GetComponent<Image>();
         if (_image == null)
             Debug.LogError("This Draggable object does not have an Image.");
+        _snapPosition = _image.rectTransform.localPosition;
     }
 
     public void ResetPosition()
@@ -42,8 +44,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         _image.raycastTarget = false;
     }
 
-    public void SetSnapPosition()
-    {
-        _snapPosition = _image.rectTransform.localPosition;
-    }
+    //public void SetSnapPosition()
+    //{
+    //    _snapPosition = _image.rectTransform.localPosition;
+    //}
 }

@@ -33,6 +33,7 @@ public class States : MonoBehaviour
     [SerializeField]
     private List<StatesSO> _tempList = new List<StatesSO>();
     
+    [SerializeField]
     private List<StatesSO> _currentSateRegion = new List<StatesSO>();
     private string _currentRegionName = "";
     private int _currentIndex;
@@ -47,8 +48,7 @@ public class States : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            _currentIndex++;
-            SetStateNames();
+            NextQuestion();
         }
     }
 
@@ -148,15 +148,24 @@ public class States : MonoBehaviour
             answerText.text = _tempList[i - 1].GetStateName();
             //_answers[i].text = _tempList[i - 1].GetStateName();
         }
+
+        //for (int i = 0; i < _answers.Length; i++)
+        //{
+        //    DraggableItem item = _answers[i].GetComponent<DraggableItem>();
+        //    if(item != null)
+        //    {
+        //        _answers[i].GetComponent<DraggableItem>().ResetPosition();
+        //    }
+        //}
         // Shuffle the state names to give more chaos to the order
-        Shuffle(_answers);
-        // Set the state names to thier new location
-        for (int i = 0; i < _answerStartingPosition.Count; i++)
-        {
-            answerRect = _answers[i].GetComponent<RectTransform>();
-            answerRect.position = _answerStartingPosition[i].position;
-            //_answers[i].rectTransform.position = _answerStartingPosition[i].position;
-        }
+        //Shuffle(_answers);
+        //// Set the state names to thier new location
+        //for (int i = 0; i < _answerStartingPosition.Count; i++)
+        //{
+        //    answerRect = _answers[i].GetComponent<RectTransform>();
+        //    answerRect.position = _answerStartingPosition[i].position;
+        //    //_answers[i].rectTransform.position = _answerStartingPosition[i].position;
+        //}
     }
 
     public string GetCurrentState()
