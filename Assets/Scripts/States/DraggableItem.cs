@@ -6,7 +6,10 @@ using UnityEngine.EventSystems;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [SerializeField]
     private Vector3 _snapPosition;
+    [SerializeField]
+    private Vector3 _startingPosition;
     [SerializeField]
     private Image _image;
 
@@ -16,11 +19,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (_image == null)
             Debug.LogError("This Draggable object does not have an Image.");
         _snapPosition = _image.rectTransform.localPosition;
+        _startingPosition = _image.rectTransform.localPosition;
     }
 
     public void ResetPosition()
     {
         _image.rectTransform.localPosition = _snapPosition;
+    }
+
+    public void ReturnHome()
+    {
+        _image.rectTransform.localPosition = _startingPosition;
     }
 
     public void SetPosition(Vector3 newPosition)

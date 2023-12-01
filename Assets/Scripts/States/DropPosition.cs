@@ -37,8 +37,8 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
         if ( playerAnswer == _stateText)
         {
             eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
-            //TODO: Add code for continuing to the next state
             _states.NextQuestion();
+            //eventData.pointerDrag.GetComponent<DraggableItem>().ReturnHome();
         }
     }
 
