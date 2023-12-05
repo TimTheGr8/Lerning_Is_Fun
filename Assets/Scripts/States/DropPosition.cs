@@ -13,6 +13,8 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
     private Image _image;
     private string _stateText;
     private GameObject _dropPositionText;
+    private DraggableItem _draggable;
+    private bool _correctAnswer = false;
 
     private void Start()
     {
@@ -34,17 +36,31 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
     public void OnDrop(PointerEventData eventData)
     {
         string playerAnswer = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().text;
+        Debug.Log(playerAnswer);
+        eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
         if ( playerAnswer == _stateText)
         {
-            eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
-            _states.NextQuestion();
-            //eventData.pointerDrag.GetComponent<DraggableItem>().ReturnHome();
+            //eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
+            _correctAnswer = true;
+            _draggable = eventData.pointerDrag.GetComponent<DraggableItem>();
+            //ResetState();
         }
+        else
+        {
+            _correctAnswer = false;
+        }
+        _states.DisplayResults(_correctAnswer);
     }
 
     private void AssignState()
     {
         _stateText = _states.GetCurrentState();
+    }
+
+    public void ResetState()
+    {
+        //_draggable.SetPosition(_draggable.GetHomePosition());
+        //_states.NextQuestion();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

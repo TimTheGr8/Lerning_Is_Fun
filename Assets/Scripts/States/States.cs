@@ -32,8 +32,9 @@ public class States : MonoBehaviour
     private List<Transform> _answerStartingPosition = new List<Transform>();
     [SerializeField]
     private List<StatesSO> _tempList = new List<StatesSO>();
-    
     [SerializeField]
+    private GameObject _stateAnswerHolder;
+    
     private List<StatesSO> _currentSateRegion = new List<StatesSO>();
     private string _currentRegionName = "";
     private int _currentIndex;
@@ -41,7 +42,6 @@ public class States : MonoBehaviour
     private void Start()
     {
         _currentIndex = 0;
-        //ChooseState();
     }
 
     private void Update()
@@ -77,6 +77,7 @@ public class States : MonoBehaviour
         }
 
         Shuffle(_currentSateRegion);
+        _stateAnswerHolder.SetActive(true);
         SetStateNames();
     }
 
@@ -117,11 +118,6 @@ public class States : MonoBehaviour
             states[i] = states[r];
             states[r] = tmp;
         }
-    }
-
-    private void SetCurrentState()
-    {
-        
     }
 
     public void SetStateNames()
@@ -175,6 +171,16 @@ public class States : MonoBehaviour
         return _currentSateRegion[_currentIndex].GetStateSprite().name;
     }
 
+    public void DisplayResults(bool isAnswerCorrect)
+    {
+        foreach (var answer in _answers)
+        {
+            DraggableItem draggable = answer.GetComponentInChildren<DraggableItem>();
+            draggable.SetPosition(draggable.GetHomePosition());
+        }
+        _stateAnswerHolder.SetActive(false);
+    }
+
     public void NextQuestion()
     {
         _currentIndex++;
@@ -184,10 +190,6 @@ public class States : MonoBehaviour
         }
         else
         {
-            //foreach (var answer in _answers)
-            //{
-            //    answer.GetComponent<DraggableItem>().ReturnHome();
-            //}
             SetStateNames();
         }
     }

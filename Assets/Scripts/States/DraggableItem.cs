@@ -27,9 +27,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         _image.rectTransform.localPosition = _snapPosition;
     }
 
-    public void ReturnHome()
+    public Vector3 GetHomePosition()
     {
-        _image.rectTransform.localPosition = _startingPosition;
+        return _startingPosition;
     }
 
     public void SetPosition(Vector3 newPosition)
