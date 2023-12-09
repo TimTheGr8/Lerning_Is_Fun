@@ -36,14 +36,13 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
     public void OnDrop(PointerEventData eventData)
     {
         string playerAnswer = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().text;
+        DraggableItem draggable = eventData.pointerDrag.GetComponent<DraggableItem>();
         Debug.Log(playerAnswer);
-        eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
+        draggable.ResetPosition();
         if ( playerAnswer == _stateText)
         {
-            //eventData.pointerDrag.GetComponent<DraggableItem>().SetPosition(_image.rectTransform.localPosition);
             _correctAnswer = true;
             _draggable = eventData.pointerDrag.GetComponent<DraggableItem>();
-            //ResetState();
         }
         else
         {
@@ -55,12 +54,6 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
     private void AssignState()
     {
         _stateText = _states.GetCurrentState();
-    }
-
-    public void ResetState()
-    {
-        //_draggable.SetPosition(_draggable.GetHomePosition());
-        //_states.NextQuestion();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -34,10 +34,15 @@ public class States : MonoBehaviour
     private List<StatesSO> _tempList = new List<StatesSO>();
     [SerializeField]
     private GameObject _stateAnswerHolder;
+    [SerializeField]
+    private TMP_Text _feedbackText;
+    [SerializeField]
+    private GameObject _nextButton;
     
     private List<StatesSO> _currentSateRegion = new List<StatesSO>();
     private string _currentRegionName = "";
     private int _currentIndex;
+    private DraggableItem _draggable;
 
     private void Start()
     {
@@ -173,18 +178,31 @@ public class States : MonoBehaviour
 
     public void DisplayResults(bool isAnswerCorrect)
     {
-        foreach (var answer in _answers)
-        {
-            DraggableItem draggable = answer.GetComponentInChildren<DraggableItem>();
-            draggable.SetPosition(draggable.GetHomePosition());
-        }
         _stateAnswerHolder.SetActive(false);
+        _feedbackText.gameObject.SetActive(true);
+        _nextButton.SetActive(true);
+        if(isAnswerCorrect)
+        {
+            _feedbackText.text = "That is correct!!!!";
+        }
+        else
+        {
+            _feedbackText.text = $"That is not correct. This state is {_currentSateRegion[_currentIndex].GetStateName()}";
+        }
     }
 
     public void NextQuestion()
     {
+        _feedbackText.gameObject.SetActive(false);
+        _nextButton.SetActive(false);
+        _stateAnswerHolder.SetActive(true);
         _currentIndex++;
-        if(_currentIndex > _currentSateRegion.Count)
+        for (int i = 0; i < _answers.Length; i++)
+        {
+            DraggableItem draggable = _answers[i].GetComponentInChildren<DraggableItem>();
+            draggable.SetPosition(draggable.GetHomePosition());
+        }
+        if (_currentIndex + 1 > _currentSateRegion.Count)
         {
             GameManager.Instance.ShowResults();
         }

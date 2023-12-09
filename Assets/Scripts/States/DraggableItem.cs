@@ -25,6 +25,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void ResetPosition()
     {
         _image.rectTransform.localPosition = _snapPosition;
+        _image.raycastTarget = true;
     }
 
     public Vector3 GetHomePosition()
@@ -45,16 +46,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         ResetPosition();
-        _image.raycastTarget = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         _image.raycastTarget = false;
     }
-
-    //public void SetSnapPosition()
-    //{
-    //    _snapPosition = _image.rectTransform.localPosition;
-    //}
 }
