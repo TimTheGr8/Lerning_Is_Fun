@@ -42,7 +42,7 @@ public class States : MonoBehaviour
     private List<StatesSO> _currentSateRegion = new List<StatesSO>();
     private string _currentRegionName = "";
     private int _currentIndex;
-    private DraggableItem _draggable;
+    private DropPosition _dropPosition;
 
     private void Start()
     {
@@ -51,10 +51,10 @@ public class States : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            NextQuestion();
-        }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    NextQuestion();
+        //}
     }
 
     private void ChooseState()
@@ -209,6 +209,7 @@ public class States : MonoBehaviour
         else
         {
             SetStateNames();
+            _dropPosition.AssignState();
         }
     }
 
@@ -224,5 +225,12 @@ public class States : MonoBehaviour
     {
         _regionSelect.SetActive(true);
         _instructionsText.SetActive(false);
+    }
+
+    public void SetDropPosition()
+    {
+        _dropPosition = GetComponentInChildren<DropPosition>();
+        if (_dropPosition == null)
+            Debug.LogError("There is no Drop Position.");
     }
 }

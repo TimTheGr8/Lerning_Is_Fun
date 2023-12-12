@@ -29,7 +29,7 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
         _image = GetComponent<Image>();
         if (_image == null)
             Debug.LogError("The Drop Posiiton does not have an image.");
-
+        _states.SetDropPosition();
         AssignState();
     }
 
@@ -51,7 +51,7 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
         _states.DisplayResults(_correctAnswer);
     }
 
-    private void AssignState()
+    public void AssignState()
     {
         _stateText = _states.GetCurrentState();
     }
