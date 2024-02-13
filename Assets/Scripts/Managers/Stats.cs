@@ -18,9 +18,33 @@ public class Stats : MonoBehaviour
         }
     }
 
+    enum _subjects
+    {
+        Math,
+        Spelling,
+        Geography
+    }
+    private string _currentSubject;
+    private string _previousSubject;
+    private int _previousScore;
+
+
     private void Awake()
     {
         _instance = this;
+    }
+
+    public void SetCurrentSubject(string subject)
+    {
+        _currentSubject = subject;
+    }
+
+    public string GetPreviousSubject()
+    {
+        if (_previousSubject == null)
+            return "There is no previous subject.";
+        else
+            return _previousSubject;
     }
 
     public void SaveStat(string stat,  float value)
