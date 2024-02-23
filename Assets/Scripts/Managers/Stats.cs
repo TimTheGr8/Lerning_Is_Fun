@@ -74,6 +74,9 @@ public class Stats : MonoBehaviour
 
     public string GetStringStat(string stat)
     {
-        return PlayerPrefs.GetString(stat);
+        if (PlayerPrefs.GetString(stat) != null)
+            return PlayerPrefs.GetString(stat);
+        else
+            return "There is no stat.";
     }
 }

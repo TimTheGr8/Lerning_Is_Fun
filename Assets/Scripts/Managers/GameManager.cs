@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
     private StatsSO _stats;
 
     private string _currentSubject;
-    private int _correctAnswers;
     private GameObject _currentScreen;
 
     private void OnEnable()
@@ -68,5 +67,10 @@ public class GameManager : MonoBehaviour
         _currentScreen = game;
         oldScreen.SetActive(false);
         _currentScreen.SetActive(true);
+    }
+
+    public void QuitGame()
+    {
+       Application.Quit();
     }
 }
