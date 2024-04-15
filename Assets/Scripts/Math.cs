@@ -35,15 +35,14 @@ public class Math : MonoBehaviour
     private int _answer;
     private int _playerAnswer;
     private int _questionNumber = 0;
-    private int _correctAnswers;
     private string _currentOperation;
 
     private void OnEnable()
     {
-        _correctAnswers = 0;
-        _currentOperation = "Addition";
+        _questionNumber = 0;
         _mathGame.SetActive(false);
         _operationSelectScreen.SetActive(true);
+        _currentOperation = "Addition";
         _feedbackText.text = "Enter your answer and press the Enter key";
         GenerateEquation();
     }
@@ -60,6 +59,7 @@ public class Math : MonoBehaviour
         if (_questionNumber > 10)
         {
             // Do the results stuff
+            GameManager.Instance.CalculateResults();
             GameManager.Instance.ShowResults();
         }
         else
@@ -139,12 +139,13 @@ public class Math : MonoBehaviour
 
         if (_playerAnswer == _answer)
         {
-            _correctAnswers++;
             _feedbackText.text = "CORRECT";
+            GameManager.Instance.AddCorrectAnswer();
         }
         else
         {
             _feedbackText.text = $"Incorrect. The correct answer is {_answer}.";
+            GameManager.Instance.AddWrongAnswer();
         }
         _answerField.gameObject.SetActive(false);
         _nextQuestionButton.SetActive(true);

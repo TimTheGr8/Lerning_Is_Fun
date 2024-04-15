@@ -16,8 +16,8 @@ public class Spelling : MonoBehaviour
     private TMP_Text _feedbackText;
     [SerializeField]
     private TMP_Text _wordNumberText;
-    [SerializeField]
-    private GameObject _checkWordButton;
+    //[SerializeField]
+    //private GameObject _checkWordButton;
     [SerializeField]
     private GameObject _nextWordButton;
     [SerializeField]
@@ -36,17 +36,30 @@ public class Spelling : MonoBehaviour
     private List<WordSO> _wordList = new List<WordSO>();
     private WordSO _currentWordSpelling;
 
+    private void OnEnable()
+    {
+        _wordNumber = 1;
+        _game.SetActive(false);
+        _instructions.SetActive(true);
+        _wordNumberText.text = _wordNumber.ToString();
+    }
+
     public void NextWord()
     {
         if (_wordNumber < 10)
+        {
             _wordNumber++;
+
+            _wordNumberText.text = _wordNumber.ToString();
+            _audioClip = _wordList[_wordNumber - 1].GetAudioClip();
+            _currentWordSpelling = _wordList[_wordNumber - 1];
+            SetWord();
+        }
         else
+        {
             FinishGame();
-        //TODO: Fix this to end the game and not call SetWord
-        _wordNumberText.text = _wordNumber.ToString();
-        _audioClip = _wordList[_wordNumber - 1].GetAudioClip();
-        _currentWordSpelling = _wordList[_wordNumber - 1];
-        SetWord();
+            return;
+        }
     }
 
     private void SetWord()
@@ -122,10 +135,12 @@ public class Spelling : MonoBehaviour
         if(_playerAnswer == _currentWord)
         {
             _feedbackText.text = "That is correct!";
+            GameManager.Instance.AddCorrectAnswer();
         }
         else
         {
             _feedbackText.text = $"The correct spelling is {_currentWord}";
+            GameManager.Instance.AddWrongAnswer();
         }
     }
 
@@ -143,6 +158,7 @@ public class Spelling : MonoBehaviour
 
     private void FinishGame()
     {
+        GameManager.Instance.CalculateResults();
         GameManager.Instance.ShowResults();
     }
 

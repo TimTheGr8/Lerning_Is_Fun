@@ -684,7 +684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &80176246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3377,7 +3377,6 @@ MonoBehaviour:
   _audio: {fileID: 1360281217}
   _feedbackText: {fileID: 760493944}
   _wordNumberText: {fileID: 2108334165}
-  _checkWordButton: {fileID: 0}
   _nextWordButton: {fileID: 1187064443}
   _playWordButton: {fileID: 627985277}
   _words:
@@ -9932,7 +9931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1065478996
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19174,8 +19173,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 80176246}
   - {fileID: 1065478996}
+  - {fileID: 80176246}
   m_Father: {fileID: 630842057}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
