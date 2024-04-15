@@ -44,17 +44,12 @@ public class States : MonoBehaviour
     private int _currentIndex;
     private DropPosition _dropPosition;
 
-    private void Start()
+    private void OnEnable()
     {
+        _game.SetActive(false);
+        _regionSelect.SetActive(false);
+        _instructions.SetActive(true);
         _currentIndex = 0;
-    }
-
-    private void Update()
-    {
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    NextQuestion();
-        //}
     }
 
     private void ChooseState()
@@ -184,10 +179,12 @@ public class States : MonoBehaviour
         if(isAnswerCorrect)
         {
             _feedbackText.text = "That is correct!!!!";
+            GameManager.Instance.AddCorrectAnswer();
         }
         else
         {
             _feedbackText.text = $"That is not correct. This state is {_currentSateRegion[_currentIndex].GetStateName()}";
+            GameManager.Instance.AddWrongAnswer();
         }
     }
 
@@ -204,6 +201,7 @@ public class States : MonoBehaviour
         }
         if (_currentIndex + 1 > _currentSateRegion.Count)
         {
+            GameManager.Instance.CalculateResults();
             GameManager.Instance.ShowResults();
         }
         else
@@ -216,15 +214,16 @@ public class States : MonoBehaviour
     public void AssignRegion(string region)
     {
         _currentRegionName = region;
-        _instructions.SetActive(false);
+        //_instructions.SetActive(false);
         ChooseState();
+        _regionSelect.SetActive(false);
         _game.SetActive(true);
     }
 
     public void SelectRegion()
     {
         _regionSelect.SetActive(true);
-        _instructionsText.SetActive(false);
+        _instructions.SetActive(false);
     }
 
     public void SetDropPosition()

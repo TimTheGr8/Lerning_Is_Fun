@@ -6,21 +6,24 @@ using TMPro;
 public class Results : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text _subjectText;
+    private TMP_Text _currentSubjectText;
     [SerializeField]
-    private TMP_Text _correctPercentText;
+    private TMP_Text _currentPercentText;
     [SerializeField]
-    private TMP_Text _correctAnswersText;
+    private TMP_Text _previousSubjectText;
     [SerializeField]
-    private TMP_Text _previousScoreText;
+    private TMP_Text _previousPercentText;
 
-    private void Start()
+    private void OnEnable()
     {
         DisaplyResults();
     }
 
     private void DisaplyResults()
     {
-        _subjectText.text = $"Subject: {Stats.Instance.GetStringStat("Subject")}";
+        _currentSubjectText.text = $"Subject: {Stats.Instance.GetStringStat("Subject")}";
+        _currentPercentText.text = $"Percentage: {Stats.Instance.GetFloatStat("CurrentScore")}%";
+        _previousSubjectText.text = $"Previous Subject: {Stats.Instance.GetStringStat("PreviousSubject")}";
+        _previousPercentText.text = $"Percentage: {Stats.Instance.GetFloatStat("PreviousScore")}%";
     }
 }

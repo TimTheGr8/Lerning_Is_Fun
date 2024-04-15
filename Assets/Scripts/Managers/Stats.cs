@@ -25,8 +25,7 @@ public class Stats : MonoBehaviour
         Geography
     }
     private string _currentSubject;
-    private string _previousSubject;
-    private int _previousScore;
+    private float _currentScore;
 
 
     private void Awake()
@@ -36,28 +35,39 @@ public class Stats : MonoBehaviour
 
     public void SetCurrentSubject(string subject)
     {
+        SetPreviousSubject(_currentSubject);
+        SetPreviousScore(_currentScore);
         _currentSubject = subject;
+        PlayerPrefs.SetString("Subject", subject);
     }
 
-    public string GetPreviousSubject()
+    public void SetCurrentScore(float score) 
     {
-        if (_previousSubject == null)
-            return "There is no previous subject.";
-        else
-            return _previousSubject;
+        _currentScore = score;
+        SaveFloatStat("CurrentScore", _currentScore);
     }
 
-    public void SaveStat(string stat,  float value)
+    void SetPreviousSubject(string prevSubject)
+    {
+        PlayerPrefs.SetString("PreviousSubject", prevSubject);
+    }
+
+    private void SetPreviousScore(float score)
+    {
+        SaveFloatStat("PreviousScore", score);
+    }
+
+    public void SaveFloatStat(string stat,  float value)
     {
         PlayerPrefs.SetFloat(stat, value);
     }
 
-    public void SaveStat(string stat, string value)
+    public void SaveStringStat(string stat, string value)
     {
         PlayerPrefs.SetString(stat, value);
     }
 
-    public void SaveStat(string stat, int value)
+    public void SaveIntStat(string stat, int value)
     {
         PlayerPrefs.SetInt(stat, value);
     }

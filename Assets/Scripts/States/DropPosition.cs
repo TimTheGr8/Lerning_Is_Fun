@@ -37,7 +37,6 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
     {
         string playerAnswer = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().text;
         DraggableItem draggable = eventData.pointerDrag.GetComponent<DraggableItem>();
-        Debug.Log(playerAnswer);
         draggable.ResetPosition();
         if ( playerAnswer == _stateText)
         {

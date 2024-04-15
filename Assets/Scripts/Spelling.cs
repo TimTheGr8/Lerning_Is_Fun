@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class Spelling : MonoBehaviour
 {
     [SerializeField]
@@ -43,7 +42,7 @@ public class Spelling : MonoBehaviour
             _wordNumber++;
         else
             FinishGame();
-
+        //TODO: Fix this to end the game and not call SetWord
         _wordNumberText.text = _wordNumber.ToString();
         _audioClip = _wordList[_wordNumber - 1].GetAudioClip();
         _currentWordSpelling = _wordList[_wordNumber - 1];

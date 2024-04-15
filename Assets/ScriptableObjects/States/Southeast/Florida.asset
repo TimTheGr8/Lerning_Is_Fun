@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Florida
   m_EditorClassIdentifier: 
   _stateName: Florida
-  _stateSprite: {fileID: 0}
+  _stateSprite: {fileID: 21300000, guid: 2fb8cfdbee9dd5a439f1dac27de5efff, type: 3}

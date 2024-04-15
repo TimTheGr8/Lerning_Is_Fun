@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class Math : MonoBehaviour
@@ -39,7 +38,7 @@ public class Math : MonoBehaviour
     private int _correctAnswers;
     private string _currentOperation;
 
-    private void Start()
+    private void OnEnable()
     {
         _correctAnswers = 0;
         _currentOperation = "Addition";

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -29,11 +30,14 @@ public class GameManager : MonoBehaviour
     private GameObject _spellingScreen;
     [SerializeField]
     private GameObject _statesScreen;
-    [SerializeField]
-    private StatsSO _stats;
 
-    private string _currentSubject;
     private GameObject _currentScreen;
+    [SerializeField]
+    private float _correctAnswers = 0;
+    [SerializeField]
+    private float _wrongAnswers = 0;
+    [SerializeField]
+    private float _totalAnswers = 0;
 
     private void OnEnable()
     {
@@ -45,13 +49,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        _currentSubject = "Math";
-    }
-
-    public void SetCurrentSubject(string subject)
-    {
-
-        PlayerPrefs.SetString("Subject", subject);
     }
 
     public void ShowResults()
@@ -67,6 +64,37 @@ public class GameManager : MonoBehaviour
         _currentScreen = game;
         oldScreen.SetActive(false);
         _currentScreen.SetActive(true);
+    }
+
+    public void AddCorrectAnswer()
+    {
+        _correctAnswers++;
+        AddTotalAnswers();
+    }
+
+    public void AddWrongAnswer()
+    {
+        _wrongAnswers++;
+        AddTotalAnswers();
+    }
+
+    private void AddTotalAnswers()
+    {
+        _totalAnswers++;
+    }
+
+    public void ClearAnswers()
+    {
+        _correctAnswers = 0;
+        _wrongAnswers = 0;
+        _totalAnswers = 0;
+    }
+
+    public void CalculateResults()
+    {
+        float percent = (_correctAnswers / _totalAnswers) * 100f;
+        Stats.Instance.SetCurrentScore(percent);
+        //Stats.Instance.SaveFloatStat("CurrentScore", percent);
     }
 
     public void QuitGame()
