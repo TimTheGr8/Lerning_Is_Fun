@@ -9,6 +9,8 @@ public class Settings : MonoBehaviour
     [SerializeField]
     private Slider _masterVolumeSlider;
     [SerializeField]
+    private Slider _musicVolumeSlider;
+    [SerializeField]
     private Slider _soundAudioSlider;
     [SerializeField]
     private Slider _brightnessSlider;
@@ -32,5 +34,10 @@ public class Settings : MonoBehaviour
     public void AdjustSoundVolume()
     {
         _mixer.SetFloat("SoundAudio", _soundAudioSlider.value);
+    }
+
+    public void AdjustMusicVolume()
+    {
+        _mixer.SetFloat("MusicAudio", _musicVolumeSlider.value);
     }
 }
