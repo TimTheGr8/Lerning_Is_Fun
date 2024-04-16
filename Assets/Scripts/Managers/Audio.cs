@@ -16,12 +16,14 @@ public class Audio : MonoBehaviour
             return _instance;
         }
     }
-    [SerializeField] 
-    AudioSource _musicSource;
     [SerializeField]
-    AudioSource _soundsSource;
+    private AudioSource _musicSource;
     [SerializeField]
-    AudioClip _currentAudioClip;
+    private AudioSource _soundsSource;
+    [SerializeField]
+    private AudioClip _correctAnswerClip;
+    [SerializeField]
+    private AudioClip _wrongAnswerClip;
 
     private void Awake()
     {
@@ -31,6 +33,16 @@ public class Audio : MonoBehaviour
     public void PlayOneShot(AudioClip clip)
     {
         _soundsSource.PlayOneShot(clip);
+    }
+
+    public void PlayCorrectSound()
+    {
+        _soundsSource.PlayOneShot(_correctAnswerClip);
+    }
+
+    public void PlayWrongAnswerSound() 
+    {
+        _soundsSource.PlayOneShot(_wrongAnswerClip);
     }
 
     public void SetMusicVolume(float volume)

@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
             SwitchScreen(_settingsScreen);
-            //Audio.Instance.PlayOneShot();
         }
     }
 
@@ -84,12 +83,14 @@ public class GameManager : MonoBehaviour
         _correctAnswers++;
         _grandTotalCorrectAnswers++;
         AddTotalAnswers();
+        Audio.Instance.PlayCorrectSound();
     }
 
     public void AddWrongAnswer()
     {
         _wrongAnswers++;
         AddTotalAnswers();
+        Audio.Instance.PlayWrongAnswerSound();
     }
 
     private void AddTotalAnswers()
