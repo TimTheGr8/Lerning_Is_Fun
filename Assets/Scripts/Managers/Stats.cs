@@ -27,7 +27,6 @@ public class Stats : MonoBehaviour
     private string _currentSubject;
     private float _currentScore;
 
-
     private void Awake()
     {
         _instance = this;

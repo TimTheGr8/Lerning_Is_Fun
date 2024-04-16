@@ -16,8 +16,6 @@ public class Spelling : MonoBehaviour
     private TMP_Text _feedbackText;
     [SerializeField]
     private TMP_Text _wordNumberText;
-    //[SerializeField]
-    //private GameObject _checkWordButton;
     [SerializeField]
     private GameObject _nextWordButton;
     [SerializeField]

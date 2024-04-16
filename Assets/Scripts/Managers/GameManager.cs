@@ -38,12 +38,22 @@ public class GameManager : MonoBehaviour
     private float _wrongAnswers = 0;
     [SerializeField]
     private float _totalAnswers = 0;
+    private float _grandTotalAnswers = 0;
+    private float _grandTotalCorrectAnswers = 0;
+    private float _grandtotalpercent = 0f;
 
     private void OnEnable()
     {
-        // Enable the title screen
         _currentScreen = _titleScreen;
         _currentScreen.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if ((Input.GetKeyDown(KeyCode.Escape)))
+        {
+            SwitchScreen(_gameSelectScreen);
+        }
     }
 
     private void Awake()
@@ -69,6 +79,7 @@ public class GameManager : MonoBehaviour
     public void AddCorrectAnswer()
     {
         _correctAnswers++;
+        _grandTotalCorrectAnswers++;
         AddTotalAnswers();
     }
 
@@ -81,6 +92,7 @@ public class GameManager : MonoBehaviour
     private void AddTotalAnswers()
     {
         _totalAnswers++;
+        _grandTotalAnswers++;
     }
 
     public void ClearAnswers()
@@ -94,7 +106,12 @@ public class GameManager : MonoBehaviour
     {
         float percent = (_correctAnswers / _totalAnswers) * 100f;
         Stats.Instance.SetCurrentScore(percent);
-        //Stats.Instance.SaveFloatStat("CurrentScore", percent);
+    }
+
+    public float CalculateTotalPercent()
+    {
+        float percent = (_grandTotalCorrectAnswers / _grandTotalAnswers) * 100f;
+        return percent;
     }
 
     public void QuitGame()
