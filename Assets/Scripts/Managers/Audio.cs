@@ -24,6 +24,8 @@ public class Audio : MonoBehaviour
     private AudioClip _correctAnswerClip;
     [SerializeField]
     private AudioClip _wrongAnswerClip;
+    [SerializeField]
+    private AudioClip _chalkAudioClip;
 
     private void Awake()
     {
@@ -43,6 +45,11 @@ public class Audio : MonoBehaviour
     public void PlayWrongAnswerSound() 
     {
         _soundsSource.PlayOneShot(_wrongAnswerClip);
+    }
+
+    public void PlayChalkSound()
+    {
+        _soundsSource.PlayOneShot(_chalkAudioClip);
     }
 
     public void SetMusicVolume(float volume)
