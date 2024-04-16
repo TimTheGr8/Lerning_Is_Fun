@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _gameSelectScreen;
     [SerializeField]
+    private GameObject _settingsScreen;
+    [SerializeField]
     private GameObject _resultsScreen;
     [SerializeField]
     private GameObject _mathScreen;
@@ -52,7 +54,8 @@ public class GameManager : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
-            SwitchScreen(_gameSelectScreen);
+            SwitchScreen(_settingsScreen);
+            Audio.Instance.PlayOneShot();
         }
     }
 
