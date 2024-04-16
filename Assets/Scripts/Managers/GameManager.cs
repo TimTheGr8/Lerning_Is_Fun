@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
             SwitchScreen(_settingsScreen);
-            Audio.Instance.PlayOneShot();
+            //Audio.Instance.PlayOneShot();
         }
     }
 

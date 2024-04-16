@@ -28,8 +28,13 @@ public class Audio : MonoBehaviour
         _instance = this;
     }
 
-    public void PlayOneShot()
+    public void PlayOneShot(AudioClip clip)
     {
-        _soundsSource.PlayOneShot(_currentAudioClip);
+        _soundsSource.PlayOneShot(clip);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        _musicSource.volume = volume;
     }
 }

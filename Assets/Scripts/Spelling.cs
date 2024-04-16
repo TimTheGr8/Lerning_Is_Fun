@@ -151,7 +151,10 @@ public class Spelling : MonoBehaviour
 
     public void PlayWord()
     {
-        _audio.PlayOneShot(_audioClip);
+        StartCoroutine(WordPause());
+        // TODO: Fix this because you are a dumb ass
+        //_audio.PlayOneShot(_audioClip);
+        //Audio.Instance.PlayOneShot(_audioClip);
     }
 
     private void FinishGame()
@@ -162,7 +165,11 @@ public class Spelling : MonoBehaviour
 
     IEnumerator WordPause()
     {
+        Audio.Instance.SetMusicVolume(0.25f);
         yield return new WaitForSeconds(0.25f);
-        PlayWord();
+        //PlayWord();
+        Audio.Instance.PlayOneShot(_audioClip);
+        yield return new WaitForSeconds(0.75f);
+        Audio.Instance.SetMusicVolume(1.0f);
     }
 }
