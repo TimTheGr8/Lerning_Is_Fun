@@ -22,8 +22,8 @@ public class Results : MonoBehaviour
     private void DisaplyResults()
     {
         _currentSubjectText.text = $"Subject: {Stats.Instance.GetStringStat("Subject")}";
-        _currentPercentText.text = $"Percentage: {Stats.Instance.GetFloatStat("CurrentScore")}%";
+        _currentPercentText.text = $"Percentage: {(int)Stats.Instance.GetFloatStat("CurrentScore")}%";
         _previousSubjectText.text = $"Previous Subject: {Stats.Instance.GetStringStat("PreviousSubject")}";
-        _previousPercentText.text = $"Percentage: {Stats.Instance.GetFloatStat("PreviousScore")}%";
+        _previousPercentText.text = $"Percentage: {(int)Stats.Instance.GetFloatStat("PreviousScore")}%";
     }
 }

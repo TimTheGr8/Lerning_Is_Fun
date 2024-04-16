@@ -16,7 +16,7 @@ public class DropPosition : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
     private DraggableItem _draggable;
     private bool _correctAnswer = false;
 
-    private void Start()
+    private void OnEnable()
     {
         _dropPositionText = GetComponentInChildren<TMP_Text>().gameObject;
         if (_dropPositionText == null)

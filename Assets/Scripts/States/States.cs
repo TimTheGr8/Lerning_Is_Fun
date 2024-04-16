@@ -214,7 +214,6 @@ public class States : MonoBehaviour
     public void AssignRegion(string region)
     {
         _currentRegionName = region;
-        //_instructions.SetActive(false);
         ChooseState();
         _regionSelect.SetActive(false);
         _game.SetActive(true);

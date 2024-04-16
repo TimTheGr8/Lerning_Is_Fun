@@ -13,7 +13,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField]
     private Image _image;
 
-    private void Start()
+    private void OnEnable()
     {
         _image = GetComponent<Image>();
         if (_image == null)
