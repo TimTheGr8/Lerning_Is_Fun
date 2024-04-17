@@ -42,9 +42,6 @@ public class Math : MonoBehaviour
         _questionNumber = 0;
         _mathGame.SetActive(false);
         _operationSelectScreen.SetActive(true);
-        _currentOperation = "Addition";
-        _feedbackText.text = "Enter your answer and press the Enter key";
-        GenerateEquation();
     }
 
     private void GenerateNumbers()
@@ -70,6 +67,17 @@ public class Math : MonoBehaviour
             _answerField.Select();
             _feedbackText.text = "Enter your answer and press the Enter key";
             _questionNumberText.text = $"Question {_questionNumber})";
+            if(_currentOperation == "Subtraction")
+            {
+                _minValue = 1;
+                _maxValue = 20;
+            }
+            else
+            {
+                _minValue = 1;
+                _maxValue = 10;
+            }
+
             GenerateNumbers();
             switch (_currentOperation)
             {
@@ -181,5 +189,6 @@ public class Math : MonoBehaviour
     {
         _operationSelectScreen.SetActive(false);
         _mathGame.SetActive(true);
+        GenerateEquation();
     }
 }
