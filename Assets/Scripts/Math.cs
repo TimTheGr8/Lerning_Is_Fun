@@ -42,6 +42,7 @@ public class Math : MonoBehaviour
         _questionNumber = 0;
         _mathGame.SetActive(false);
         _operationSelectScreen.SetActive(true);
+        _currentOperation = "Addition";
     }
 
     private void GenerateNumbers()
